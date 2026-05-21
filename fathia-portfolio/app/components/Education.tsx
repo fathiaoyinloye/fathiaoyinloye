@@ -10,7 +10,7 @@ const edu = [
     note: "Intensive professional engineering programme"
   },
   {
-    degree: "HND — Accounting",
+    degree: "OND — Accounting",
     school: "Lagos State Polytechnic",
     location: "Lagos, Nigeria",
     period: "2021 – 2023",
