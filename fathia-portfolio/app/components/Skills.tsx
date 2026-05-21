@@ -10,24 +10,32 @@ const skillGroups = [
     skills: ["Python", "Django", "Django REST Framework", "FastAPI"],
   },
   {
-    label: "Data & Persistence",
-    skills: ["PostgreSQL", "SQL", "Custom Persistence", "Data Integrity", "Atomic Transactions"],
+    label: "Frontend",
+    skills: ["React", "JavaScript", "HTML/CSS"],
   },
   {
-    label: "DevOps & CI/CD",
-    skills: ["Git", "GitHub Actions", "Docker", "AWS EC2", "Linux"],
+    label: "Data & Persistence",
+    skills: ["PostgreSQL", "SQL", "Custom Persistence Framework", "File I/O", "Data Integrity & Validation"],
+  },
+  {
+    label: "DevOps & Cloud",
+    skills: ["Docker", "GitHub Actions", "AWS EC2", "Git"],
   },
   {
     label: "Architecture",
-    skills: ["Layered Architecture", "Event-Driven (Kafka)", "Microservices", "OOP Patterns", "REST API Design"],
+    skills: ["Layered Architecture", "Event-Driven Architecture", "Microservices", "OOP Design Patterns"],
   },
   {
-    label: "Methods",
-    skills: ["Agile / Scrum", "Code Review", "TDD", "Big O Analysis", "Technical Documentation"],
+    label: "Messaging",
+    skills: ["Apache Kafka"],
+  },
+  {
+    label: "Methods & Domain",
+    skills: ["Agile / Scrum", "Big O Analysis", "Debugging", "Financial Logic & Reporting"],
   },
   {
     label: "Also Familiar",
-    skills: ["JavaScript", "Go", "Apache Kafka", "React (basic)"],
+    skills: ["Go"],
   },
 ];
 
@@ -41,7 +49,7 @@ export function Skills() {
         </h2>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {skillGroups.map((group, i) => (
           <div
             key={i}

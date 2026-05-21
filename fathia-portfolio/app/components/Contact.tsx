@@ -21,7 +21,7 @@ export function Contact() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {[
-              { icon: <Mail size={14} />, label: "fathiaoyinloye20@gmail.com", href: "mailto:fathiaoyinloye20@gmail.com" },
+              { icon: <Mail size={14} />, label: "fathiaoyinloye21@gmail.com", href: "mailto:fathiaoyinloye20@gmail.com" },
       { icon: <Link2 size={14} />, label: "linkedin.com/in/fathia-oyinloye", href: "https://linkedin.com" },
               { icon: <GitFork size={14} />, label: "github.com/fathia", href: "https://github.com" },
               { icon: <MapPin size={14} />, label: "Lagos, Nigeria", href: null },
