@@ -35,10 +35,10 @@ export function Experience() {
   const [expanded, setExpanded] = useState<number | null>(0);
 
   return (
-    <section id="experience" style={{ maxWidth: "1100px", margin: "0 auto", padding: "6rem 2rem" }}>
-      <div style={{ marginBottom: "3rem" }}>
+    <section id="experience" style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 1.5rem" }}>
+      <div style={{ marginBottom: "2.5rem" }}>
         <p className="section-label" style={{ marginBottom: "0.5rem" }}>01 — EXPERIENCE</p>
-        <h2 style={{ fontSize: "2.2rem", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
+        <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
           Where I've Worked
         </h2>
       </div>
@@ -48,18 +48,18 @@ export function Experience() {
           <div
             key={i}
             className="card"
-            style={{ padding: "1.5rem 2rem", cursor: "pointer" }}
+            style={{ padding: "1.2rem 1.5rem", cursor: "pointer" }}
             onClick={() => setExpanded(expanded === i ? null : i)}
           >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-              <div>
-                <h3 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: "1rem", color: "var(--fg)", marginBottom: "0.2rem" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1rem" }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <h3 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: "0.95rem", color: "var(--fg)", marginBottom: "0.2rem" }}>
                   {job.title}
                 </h3>
-                <p style={{ color: "var(--accent-bright)", fontSize: "0.8rem", fontFamily: "'DM Mono', monospace", marginBottom: "0.2rem" }}>
+                <p style={{ color: "var(--accent-bright)", fontSize: "0.78rem", fontFamily: "'DM Mono', monospace", marginBottom: "0.2rem" }}>
                   {job.company}
                 </p>
-                <p style={{ color: "var(--fg-subtle)", fontSize: "0.7rem", fontFamily: "'DM Mono', monospace" }}>
+                <p style={{ color: "var(--fg-subtle)", fontSize: "0.65rem", fontFamily: "'DM Mono', monospace" }}>
                   {job.type} · {job.period}
                 </p>
               </div>
@@ -74,10 +74,10 @@ export function Experience() {
             </div>
 
             {expanded === i && (
-              <div style={{ marginTop: "1.5rem", borderTop: "1px solid var(--border)", paddingTop: "1.5rem" }}>
-                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.6rem", marginBottom: "1.2rem" }}>
+              <div style={{ marginTop: "1.2rem", borderTop: "1px solid var(--border)", paddingTop: "1.2rem" }}>
+                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.6rem", marginBottom: "1rem" }}>
                   {job.bullets.map((b, j) => (
-                    <li key={j} style={{ display: "flex", gap: "0.8rem", fontSize: "0.8rem", color: "var(--fg-muted)", lineHeight: 1.7 }}>
+                    <li key={j} style={{ display: "flex", gap: "0.7rem", fontSize: "0.78rem", color: "var(--fg-muted)", lineHeight: 1.7 }}>
                       <span style={{ color: "var(--accent-bright)", flexShrink: 0, marginTop: "2px" }}>—</span>
                       {b}
                     </li>
