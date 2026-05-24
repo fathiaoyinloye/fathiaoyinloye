@@ -17,7 +17,7 @@ const projects = [
     desc: "Clean URL shortening application that converts long links into short, shareable URLs.",
     detail: "Built and deployed as a production web application. Handles link creation, redirection, and management with a clean interface.",
     tags: ["Python", "Django", "PostgreSQL", "REST API"],
-    live: "https://url-shortener-application-vert.vercel.app/",
+    live: "https://url-shortener-frontend-eosin.vercel.app/",
     github: null,
   },
   {
