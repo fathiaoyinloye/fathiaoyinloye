@@ -21,7 +21,7 @@ const projects = [
     github: null,
   },
   {
-    name: "OmotempoPay",
+    name: "OmotemmyPay",
     emoji: "💸",
     desc: "Django-powered digital wallet supporting deposits, peer-to-peer transfers, and transaction history.",
     detail: "RESTful API endpoints with atomic transaction logic to eliminate double-spend errors. Full authentication and session management tied to all wallet operations.",
