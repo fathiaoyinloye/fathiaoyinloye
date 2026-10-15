@@ -14,16 +14,16 @@ export function Contact() {
       <div className="contact-grid">
         <div>
           <p style={{ fontSize: "0.85rem", color: "var(--fg-muted)", lineHeight: 1.9, marginBottom: "2rem" }}>
-            I'm open to full-time roles, internships, and interesting collaborations.
-            If you're building something and need a backend engineer who ships clean,
-            tested, documented code — I'd love to hear from you.
+            I'm open to full-time QA roles, internships, and interesting collaborations.
+            If you're building something and need a QA engineer who understands requirements,
+            designs meaningful test scenarios, and verifies fixes — I'd love to hear from you.
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {[
               { icon: <Mail size={14} />, label: "fathiaoyinloye22@gmail.com", href: "mailto:fathiaoyinloye22@gmail.com" },
-              { icon: <Link2 size={14} />, label: "linkedin.com/in/fathia-oyinloye", href: "https://linkedin.com" },
-              { icon: <GitFork size={14} />, label: "github.com/fathia", href: "https://github.com" },
+              { icon: <Link2 size={14} />, label: "linkedin.com/in/fathiaoyinloyle", href: "https://linkedin.com/in/fathiaoyinloyle" },
+              { icon: <GitFork size={14} />, label: "github.com/fathiaoyinloyle", href: "https://github.com/fathiaoyinloyle" },
               { icon: <MapPin size={14} />, label: "Lagos, Nigeria", href: null },
             ].map(({ icon, label, href }) => (
               <div key={label} style={{ display: "flex", alignItems: "center", gap: "0.8rem" }}>
@@ -65,7 +65,7 @@ export function Contact() {
                 color: "var(--fg)", outline: "none", width: "100%", resize: "none",
               }}
             />
-            <a href="mailto:fathiaoyinloye20@gmail.com"
+            <a href="mailto:fathiaoyinloye22@gmail.com"
               style={{
                 background: "var(--fg)", color: "var(--bg)",
                 padding: "0.75rem", borderRadius: "3px",

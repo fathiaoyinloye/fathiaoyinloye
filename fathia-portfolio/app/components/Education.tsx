@@ -2,12 +2,12 @@
 
 const edu = [
   {
-    degree: "Software Engineering Programme",
+    degree: "Software Engineering Training",
     school: "Semicolon Africa",
     location: "Lagos, Nigeria",
     period: "2023 – 2024",
     subjects: ["Java", "Python", "Software Architecture", "Data Structures & Algorithms", "DevOps"],
-    note: "Intensive professional engineering programme",
+    note: "Intensive professional software engineering training",
   },
   {
     degree: "OND — Accounting",
