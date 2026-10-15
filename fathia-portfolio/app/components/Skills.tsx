@@ -1,15 +1,11 @@
 "use client";
 
 const skillGroups = [
-  { label: "Primary Language", skills: ["Java", "Spring Boot", "Spring Data JPA", "JUnit 5", "Mockito"] },
-  { label: "Python Stack", skills: ["Python", "Django", "Django REST Framework", "FastAPI"] },
-  { label: "Frontend", skills: ["React", "JavaScript", "HTML/CSS"] },
-  { label: "Data & Persistence", skills: ["PostgreSQL", "SQL", "Custom Persistence Framework", "File I/O", "Data Integrity & Validation"] },
-  { label: "DevOps & Cloud", skills: ["Docker", "GitHub Actions", "AWS EC2", "Git"] },
-  { label: "Architecture", skills: ["Layered Architecture", "Event-Driven Architecture", "Microservices", "OOP Design Patterns"] },
-  { label: "Messaging", skills: ["Apache Kafka"] },
-  { label: "Methods & Domain", skills: ["Agile / Scrum", "Big O Analysis", "Debugging", "Financial Logic & Reporting"] },
-  { label: "Also Familiar", skills: ["Go"] },
+  { label: "Testing & Test Design", skills: ["Functional Testing", "Regression Testing", "Exploratory Testing", "Boundary & Negative Testing", "Integration Testing", "Requirements Analysis", "Test Planning & Test Case Design", "Defect Reporting & Fix Verification"] },
+  { label: "API & Data Validation", skills: ["Postman", "REST API Validation", "HTTP Status Codes & Error Handling", "JWT Authentication & RBAC Testing", "SQL & Database Validation"] },
+  { label: "Test Automation", skills: ["pytest", "JUnit 5", "Cypress", "Mockito", "Playwright (in progress)"] },
+  { label: "Software Engineering Foundation", skills: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "Spring Boot", "Django", "Django REST Framework", "PostgreSQL", "MySQL", "MongoDB"] },
+  { label: "CI/CD & Collaboration", skills: ["Git", "GitHub", "GitHub Actions", "Docker", "Agile / Scrum", "GitHub Issues"] },
 ];
 
 export function Skills() {
@@ -18,7 +14,7 @@ export function Skills() {
       <div style={{ marginBottom: "2.5rem" }}>
         <p className="section-label" style={{ marginBottom: "0.5rem" }}>03 — SKILLS</p>
         <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
-          What I Work With
+          What I Test With
         </h2>
       </div>
 
