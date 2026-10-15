@@ -24,7 +24,7 @@ export function Education() {
     <section id="education" style={{ background: "var(--bg-secondary)", padding: "5rem 0" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 1.5rem" }}>
         <div style={{ marginBottom: "2.5rem" }}>
-          <p className="section-label" style={{ marginBottom: "0.5rem" }}>04 — EDUCATION</p>
+          <p className="section-label" style={{ marginBottom: "0.5rem" }}>03 — EDUCATION</p>
           <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
             Where I Learned
           </h2>

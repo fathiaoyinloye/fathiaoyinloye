@@ -12,7 +12,7 @@ export function Skills() {
   return (
     <section id="skills" style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 1.5rem" }}>
       <div style={{ marginBottom: "2.5rem" }}>
-        <p className="section-label" style={{ marginBottom: "0.5rem" }}>03 — SKILLS</p>
+        <p className="section-label" style={{ marginBottom: "0.5rem" }}>02 — SKILLS</p>
         <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
           What I Test With
         </h2>
