@@ -1,11 +1,11 @@
 "use client";
 
 const skillGroups = [
-  { label: "Testing & Test Design", skills: ["Functional Testing", "Regression Testing", "Exploratory Testing", "Boundary & Negative Testing", "Integration Testing", "Requirements Analysis", "Test Planning & Test Case Design", "Defect Reporting & Fix Verification"] },
-  { label: "API & Data Validation", skills: ["Postman", "REST API Validation", "HTTP Status Codes & Error Handling", "JWT Authentication & RBAC Testing", "SQL & Database Validation"] },
-  { label: "Test Automation", skills: ["pytest", "JUnit 5", "Cypress", "Mockito", "Playwright (in progress)"] },
-  { label: "Software Engineering Foundation", skills: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "Spring Boot", "Django", "Django REST Framework", "PostgreSQL", "MySQL", "MongoDB"] },
-  { label: "CI/CD & Collaboration", skills: ["Git", "GitHub", "GitHub Actions", "Docker", "Agile / Scrum", "GitHub Issues"] },
+  { label: "Testing", skills: ["Functional Testing", "Regression Testing", "Exploratory Testing", "Boundary and Negative Testing", "Integration Testing", "Test Planning", "Test Case Design", "Requirements Analysis", "Defect Reporting"] },
+  { label: "API and Data Validation", skills: ["Postman", "REST API Testing", "HTTP Status Codes", "JWT Authentication", "RBAC Testing", "SQL and Database Validation"] },
+  { label: "Automation", skills: ["pytest", "JUnit 5", "Cypress", "Mockito", "Playwright (in progress)"] },
+  { label: "Technical Foundation", skills: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "Spring Boot", "Django", "PostgreSQL", "MySQL", "MongoDB"] },
+  { label: "Tools and Collaboration", skills: ["Git", "GitHub", "GitHub Actions", "Docker", "Agile/Scrum"] },
 ];
 
 export function Skills() {
