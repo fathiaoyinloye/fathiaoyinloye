@@ -6,8 +6,8 @@ const projects = [
     name: "MedSync",
     emoji: "🏥",
     desc: "Multi-tenant electronic medical records and hospital management system.",
-    detail: "Primary QA case study. Testing covers test planning, functional and regression testing, API testing, tenant isolation, billing validation, and defect verification.",
-    tags: ["QA Case Study", "API Testing", "Regression Testing", "SQL Validation"],
+    detail: "Primary QA case study. My testing contribution covers test planning and test case design, functional and regression testing, API testing including JWT/RBAC validation, tenant isolation, offline synchronisation, billing validation, database validation, and defect reporting.",
+    tags: ["QA Case Study", "Test Planning", "API Testing", "Regression Testing", "SQL Validation"],
     live: null,
     github: null,
   },
@@ -36,7 +36,7 @@ export function Projects() {
     <section id="projects" style={{ background: "var(--bg-secondary)", padding: "5rem 0" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 1.5rem" }}>
         <div style={{ marginBottom: "2.5rem" }}>
-          <p className="section-label" style={{ marginBottom: "0.5rem" }}>02 — PROJECTS</p>
+          <p className="section-label" style={{ marginBottom: "0.5rem" }}>01 — PROJECTS</p>
           <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
             Things I've Tested & Built
           </h2>
