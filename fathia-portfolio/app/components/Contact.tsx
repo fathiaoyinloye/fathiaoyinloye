@@ -1,5 +1,5 @@
 "use client";
-import { Mail, GitFork, Link2, MapPin } from "lucide-react";
+import { Mail, GitFork, Link2, Globe, MapPin } from "lucide-react";
 
 export function Contact() {
   return (
@@ -22,8 +22,9 @@ export function Contact() {
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {[
               { icon: <Mail size={14} />, label: "fathiaoyinloye22@gmail.com", href: "mailto:fathiaoyinloye22@gmail.com" },
-              { icon: <Link2 size={14} />, label: "linkedin.com/in/fathiaoyinloyle", href: "https://linkedin.com/in/fathiaoyinloyle" },
-              { icon: <GitFork size={14} />, label: "github.com/fathiaoyinloyle", href: "https://github.com/fathiaoyinloyle" },
+              { icon: <Link2 size={14} />, label: "linkedin.com/in/fathiaoyinloye", href: "https://linkedin.com/in/fathiaoyinloye" },
+              { icon: <GitFork size={14} />, label: "github.com/fathiaoyinloye", href: "https://github.com/fathiaoyinloye" },
+              { icon: <Globe size={14} />, label: "fathiaoyinloye.vercel.app", href: "https://fathiaoyinloye.vercel.app/" },
               { icon: <MapPin size={14} />, label: "Lagos, Nigeria", href: null },
             ].map(({ icon, label, href }) => (
               <div key={label} style={{ display: "flex", alignItems: "center", gap: "0.8rem" }}>

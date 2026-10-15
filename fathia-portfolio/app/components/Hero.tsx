@@ -125,8 +125,8 @@ export function Hero() {
 
             <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
               {[
-                { label: "GitHub", href: "https://github.com/fathiaoyinloyle" },
-                { label: "LinkedIn", href: "https://linkedin.com/in/fathiaoyinloyle" },
+                { label: "GitHub", href: "https://github.com/fathiaoyinloye" },
+                { label: "LinkedIn", href: "https://linkedin.com/in/fathiaoyinloye" },
                 { label: "Email", href: "mailto:fathiaoyinloye22@gmail.com" },
               ].map(({ label, href }) => (
                 <a key={label} href={href} target="_blank" rel="noreferrer"
