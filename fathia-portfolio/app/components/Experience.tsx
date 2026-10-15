@@ -4,6 +4,34 @@ import { ChevronDown } from "lucide-react";
 
 const jobs = [
   {
+    title: "Quality Engineer",
+    company: "Aroko (Coded) Technologies",
+    period: "September 2025 – Present",
+    type: "MedSync — Multi-Tenant EMR & Hospital Management System",
+    tags: ["Test Planning", "Test Case Design", "Functional Testing", "Regression Testing", "API Testing", "Postman", "SQL", "Defect Reporting"],
+    bullets: [
+      "Planned testing and designed test cases covering functional and regression scope for the MedSync multi-tenant EMR and hospital management system.",
+      "Performed functional and regression testing across core hospital workflows, including boundary and negative testing of inputs and edge cases.",
+      "Tested REST APIs including authentication, JWT handling, and role-based access control for clinical, administrative, and tenant-scoped roles.",
+      "Validated multi-tenant data isolation so hospital tenants can only access their own records and operational data.",
+      "Tested offline synchronisation behaviour and validated billing flows for accuracy and data integrity.",
+      "Reported defects with clear reproduction steps and retested fixes to verify resolution before close-out.",
+    ],
+  },
+  {
+    title: "Quality Engineer",
+    company: "Arasupermart",
+    period: "March 2023 – July 2025",
+    type: "Online Ordering Platform",
+    tags: ["Manual Testing", "Test Case Design", "Functional Testing", "Regression Testing", "Defect Reporting", "Agile"],
+    bullets: [
+      "Designed and executed manual test cases for an online ordering platform covering product browsing, cart, and checkout workflows.",
+      "Tested inventory and payment scenarios as well as end-to-end order processing from placement through fulfilment.",
+      "Reproduced reported defects, documented clear steps to reproduce, and verified fixes through targeted retesting.",
+      "Collaborated cross-functionally with developers and stakeholders to clarify expected behaviour and confirm readiness of fixes.",
+    ],
+  },
+  {
     title: "Backend & Open Source Engineer",
     company: "GitHub Community Projects",
     period: "2024 – Present",
