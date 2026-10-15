@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const roles = ["Software Engineer", "Java Developer", "Backend Engineer", "Open Source Contributor"];
+const roles = ["QA Engineer", "API Testing & Test Automation", "Manual Testing & Test Design", "Backend Engineering Foundation"];
 
 export function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -93,8 +93,14 @@ export function Hero() {
             </div>
 
             <p style={{ color: "var(--fg-muted)", lineHeight: 1.8, fontSize: "0.85rem", maxWidth: "480px", marginBottom: "2rem" }}>
-              Junior Software Engineer with 2 years shipping production Java and Python applications.
-              I build scalable, well-tested backend systems — REST APIs, event-driven pipelines, and CI/CD workflows.
+              QA Engineer | API Testing & Test Automation | Backend Engineering Foundation.
+              <br /><br />
+              I am a QA Engineer with a software engineering background and experience in manual testing, API testing, and test automation.
+              <br /><br />
+              I approach testing by understanding requirements, designing meaningful test scenarios, investigating unexpected behaviour, and validating application functionality and data integrity.
+              <br /><br />
+              My backend engineering foundation helps me investigate issues beyond the user interface, while my focus on software quality drives me to identify risks, document defects clearly, and verify fixes.
+              <br /><br />
               Based in <span style={{ color: "var(--fg)" }}>Lagos, Nigeria.</span>
             </p>
 
@@ -119,9 +125,9 @@ export function Hero() {
 
             <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
               {[
-                { label: "GitHub", href: "https://github.com" },
-                { label: "LinkedIn", href: "https://linkedin.com" },
-                { label: "Email", href: "mailto:fathiaoyinloye20@gmail.com" },
+                { label: "GitHub", href: "https://github.com/fathiaoyinloyle" },
+                { label: "LinkedIn", href: "https://linkedin.com/in/fathiaoyinloyle" },
+                { label: "Email", href: "mailto:fathiaoyinloye22@gmail.com" },
               ].map(({ label, href }) => (
                 <a key={label} href={href} target="_blank" rel="noreferrer"
                   style={{ fontSize: "0.6rem", letterSpacing: "0.15em", color: "var(--fg-subtle)", textDecoration: "none", textTransform: "uppercase" }}
