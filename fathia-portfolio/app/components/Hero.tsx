@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const roles = ["QA Engineer", "API Testing & Test Automation", "Manual Testing & Test Design", "Backend Engineering Foundation"];
+const roles = ["QA Engineer", "API Testing & Test Automation"];
 
 export function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -93,13 +93,9 @@ export function Hero() {
             </div>
 
             <p style={{ color: "var(--fg-muted)", lineHeight: 1.8, fontSize: "0.85rem", maxWidth: "480px", marginBottom: "2rem" }}>
-              QA Engineer | API Testing & Test Automation | Backend Engineering Foundation.
+              QA Engineer | API Testing & Test Automation.
               <br /><br />
-              I am a QA Engineer with a software engineering background and experience in manual testing, API testing, and test automation.
-              <br /><br />
-              I approach testing by understanding requirements, designing meaningful test scenarios, investigating unexpected behaviour, and validating application functionality and data integrity.
-              <br /><br />
-              My backend engineering foundation helps me investigate issues beyond the user interface, while my focus on software quality drives me to identify risks, document defects clearly, and verify fixes.
+              I am a QA Engineer with a software engineering background, focused on manual testing, API testing, test design, and test automation. I use my technical foundation to investigate application behaviour, identify defects, and validate software functionality and data integrity.
               <br /><br />
               Based in <span style={{ color: "var(--fg)" }}>Lagos, Nigeria.</span>
             </p>
