@@ -3,11 +3,29 @@ import { ExternalLink, GitFork } from "lucide-react";
 
 const projects = [
   {
+    name: "MedSync",
+    emoji: "🏥",
+    desc: "Multi-tenant electronic medical records and hospital management system. Primary QA case study: I own testing across tenant-scoped clinical and administrative workflows.",
+    detail: "QA scope includes test planning and test case design, functional and regression testing, API and UI testing where performed, database validation for record accuracy and tenant isolation, defect reporting with reproduction steps, and retesting of fixes.",
+    tags: ["QA Case Study", "Test Planning", "API Testing", "Regression Testing", "SQL Validation", "RBAC"],
+    live: null,
+    github: null,
+  },
+  {
+    name: "Giveaway Trust & Audit Engine (In Progress)",
+    emoji: "🎁",
+    desc: "Ongoing QA project: I am responsible for the QA process, from requirements analysis and test scope definition through test execution and defect management.",
+    detail: "Completed so far: requirements analysis, test scope definition, and test planning with test case preparation underway. Planned next: API and UI testing, defect management, retesting, and regression testing. No test results are claimed for work not yet executed.",
+    tags: ["In Progress", "Test Planning", "Test Case Design", "API Testing", "UI Testing", "Defect Management"],
+    live: null,
+    github: null,
+  },
+  {
     name: "SmartBudget",
     emoji: "💰",
-    desc: "Intelligent budget tracking app with pluggable report generation and third-party financial API integration.",
-    detail: "Built with layered architecture. Uses the Strategy Pattern so each report type (monthly, category, trends) is an interchangeable module — extending the system never touches core logic.",
-    tags: ["Java", "Spring Boot", "PostgreSQL", "Strategy Pattern", "External API"],
+    desc: "Budget tracking app with pluggable report generation and third-party financial API integration. QA focus: integration and regression testing of reporting and external API behaviour.",
+    detail: "Testing emphasis on report accuracy validation across report types (monthly, category, trends), regression testing when report modules change, and third-party API failure scenarios. Built with layered architecture using the Strategy Pattern so each report type is an interchangeable module.",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "Strategy Pattern", "External API", "Integration Testing", "Regression Testing"],
     live: "https://budget-application-one.vercel.app/",
     github: null,
   },
@@ -65,7 +83,7 @@ export function Projects() {
         <div style={{ marginBottom: "2.5rem" }}>
           <p className="section-label" style={{ marginBottom: "0.5rem" }}>02 — PROJECTS</p>
           <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
-            Things I've Built
+            Things I've Tested & Built
           </h2>
         </div>
 
