@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const roles = ["QA Engineer", "API Testing & Test Automation"];
 
@@ -24,8 +25,12 @@ export function Hero() {
         const t = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 30);
         return () => clearTimeout(t);
       } else {
-        setRoleIndex((i) => (i + 1) % roles.length);
-        setTyping(true);
+        // Wrap in setTimeout to avoid direct setState in effect body
+        const t = setTimeout(() => {
+          setRoleIndex((i) => (i + 1) % roles.length);
+          setTyping(true);
+        }, 0);
+        return () => clearTimeout(t);
       }
     }
   }, [displayed, typing, roleIndex]);
@@ -68,13 +73,6 @@ export function Hero() {
 
           {/* Text content */}
           <div className="hero-text">
-            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1.2rem" }}>
-              <span className="available-dot" />
-              <span style={{ fontSize: "0.65rem", fontFamily: "'DM Mono', monospace", color: "#22c55e", letterSpacing: "0.1em" }}>
-                AVAILABLE FOR WORK
-              </span>
-            </div>
-
             <h1 style={{
               fontFamily: "'Syne', sans-serif", fontWeight: 800,
               fontSize: "clamp(2.4rem, 8vw, 4.2rem)",
@@ -101,22 +99,22 @@ export function Hero() {
             </p>
 
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
-              <a href="#contact" style={{
+              <Link href="/contact" style={{
                 background: "var(--fg)", color: "var(--bg)",
                 padding: "0.7rem 1.4rem", borderRadius: "3px",
                 fontFamily: "'DM Mono', monospace", fontSize: "0.65rem",
                 letterSpacing: "0.1em", textDecoration: "none",
               }}>
                 GET IN TOUCH
-              </a>
-              <a href="#projects" style={{
+              </Link>
+              <Link href="/projects" style={{
                 border: "1px solid var(--border)", color: "var(--fg-muted)",
                 padding: "0.7rem 1.4rem", borderRadius: "3px",
                 fontFamily: "'DM Mono', monospace", fontSize: "0.65rem",
                 letterSpacing: "0.1em", textDecoration: "none",
               }}>
                 VIEW PROJECTS
-              </a>
+              </Link>
             </div>
 
             <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>

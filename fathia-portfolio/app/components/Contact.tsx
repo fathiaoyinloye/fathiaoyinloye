@@ -7,16 +7,16 @@ export function Contact() {
       <div style={{ marginBottom: "2.5rem" }}>
         <p className="section-label" style={{ marginBottom: "0.5rem" }}>04 — CONTACT</p>
         <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
-          Let's Work Together
+          Let&apos;s Work Together
         </h2>
       </div>
 
       <div className="contact-grid">
         <div>
           <p style={{ fontSize: "0.85rem", color: "var(--fg-muted)", lineHeight: 1.9, marginBottom: "2rem" }}>
-            I'm open to full-time QA roles, internships, and interesting collaborations.
-            If you're building something and need a QA engineer who understands requirements,
-            designs meaningful test scenarios, and verifies fixes — I'd love to hear from you.
+            I&apos;m open to full-time QA roles, internships, and interesting collaborations.
+            If you&apos;re building something and need a QA engineer who understands requirements,
+            designs meaningful test scenarios, and verifies fixes — I&apos;d love to hear from you.
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
@@ -83,7 +83,7 @@ export function Contact() {
 
       <div style={{ marginTop: "4rem", paddingTop: "2rem", borderTop: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
         <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "0.9rem", color: "var(--fg)" }}>
-          FO<span style={{ color: "var(--accent-bright)" }}>.</span>
+          Omotemmy<span style={{ color: "var(--accent-bright)" }}>.</span>
         </span>
         <span style={{ fontSize: "0.62rem", color: "var(--fg-subtle)", fontFamily: "'DM Mono', monospace" }}>
           © {new Date().getFullYear()} Fathia Oyinloye

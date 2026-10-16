@@ -1,35 +1,7 @@
 "use client";
-import { ExternalLink, GitFork } from "lucide-react";
-
-const projects = [
-  {
-    name: "MedSync",
-    emoji: "🏥",
-    desc: "Multi-tenant electronic medical records and hospital management system.",
-    detail: "Primary QA case study. My testing contribution covers test planning and test case design, functional and regression testing, API testing including JWT/RBAC validation, tenant isolation, offline synchronisation, billing validation, database validation, and defect reporting.",
-    tags: ["QA Case Study", "Test Planning", "API Testing", "Regression Testing", "SQL Validation"],
-    live: null,
-    github: null,
-  },
-  {
-    name: "Giveaway Trust & Audit Engine (In Progress)",
-    emoji: "🎁",
-    desc: "Giveaway platform trust and audit tooling, currently in development.",
-    detail: "I am responsible for the QA process, including requirements analysis, test scope definition, test planning, and test case preparation. API and UI testing, defect management, retesting, and regression testing will be documented as these activities are performed.",
-    tags: ["In Progress", "Test Planning", "Test Case Design"],
-    live: null,
-    github: null,
-  },
-  {
-    name: "SmartBudget",
-    emoji: "💰",
-    desc: "Budget tracking app with pluggable report generation and third-party financial API integration.",
-    detail: "Supporting testing project focused on integration testing, regression testing, report accuracy, and third-party API failure handling. Built with layered architecture using the Strategy Pattern for interchangeable report modules.",
-    tags: ["Java", "Spring Boot", "PostgreSQL", "Integration Testing", "Regression Testing"],
-    live: "https://budget-application-one.vercel.app/",
-    github: null,
-  },
-];
+import { ExternalLink, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { projects } from "../data/projects";
 
 export function Projects() {
   return (
@@ -38,7 +10,7 @@ export function Projects() {
         <div style={{ marginBottom: "2.5rem" }}>
           <p className="section-label" style={{ marginBottom: "0.5rem" }}>01 — PROJECTS</p>
           <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
-            Things I've Tested & Built
+            Things I&apos;ve Tested &amp; Built
           </h2>
         </div>
 
@@ -62,13 +34,6 @@ export function Projects() {
                       LIVE
                     </a>
                   )}
-                  {p.github && (
-                    <a href={p.github} target="_blank" rel="noreferrer"
-                      style={{ color: "var(--fg-subtle)" }}
-                    >
-                      <GitFork size={15} />
-                    </a>
-                  )}
                 </div>
               </div>
 
@@ -88,6 +53,18 @@ export function Projects() {
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginTop: "auto" }}>
                 {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
               </div>
+
+              <Link
+                href={`/projects/${p.slug}`}
+                style={{
+                  display: "flex", alignItems: "center", gap: "0.4rem",
+                  fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase",
+                  color: "var(--accent-bright)", textDecoration: "none",
+                  fontFamily: "'DM Mono', monospace", marginTop: "0.25rem",
+                }}
+              >
+                VIEW CASE STUDY <ArrowRight size={11} />
+              </Link>
             </div>
           ))}
         </div>

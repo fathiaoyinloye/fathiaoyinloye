@@ -1,23 +1,5 @@
 "use client";
-
-const edu = [
-  {
-    degree: "Software Engineering Training",
-    school: "Semicolon Africa",
-    location: "Lagos, Nigeria",
-    period: "2023 – 2024",
-    subjects: ["Java", "Python", "Software Architecture", "Data Structures & Algorithms", "DevOps"],
-    note: "Intensive professional software engineering training",
-  },
-  {
-    degree: "OND — Accounting",
-    school: "Lagos State Polytechnic",
-    location: "Lagos, Nigeria",
-    period: "2021 – 2023",
-    subjects: ["Financial Logic", "Data Analysis", "Business Systems", "Reporting"],
-    note: "Foundation in analytical thinking and precision",
-  },
-];
+import { education } from "../data/education";
 
 export function Education() {
   return (
@@ -31,7 +13,7 @@ export function Education() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          {edu.map((e, i) => (
+          {education.map((e, i) => (
             <div key={i} className="card edu-card" style={{ padding: "1.5rem" }}>
               <div className="edu-inner">
                 <div style={{ flex: 1 }}>

@@ -2,21 +2,45 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Skills", href: "/skills" },
+  { label: "Education", href: "/education" },
+  { label: "Contact", href: "/contact" },
+];
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    setMounted(true);
+    // Deferred to avoid setState-in-effect cascade (hydration pattern)
+    const t = setTimeout(() => setMounted(true), 0);
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
-  const links = ["projects", "skills", "education", "contact"];
+  // Close mobile menu on route change
+  useEffect(() => {
+    const t = setTimeout(() => setMenuOpen(false), 0);
+    return () => clearTimeout(t);
+  }, [pathname]);
+
+  function isActive(href: string) {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  }
 
   return (
     <>
@@ -29,14 +53,27 @@ export function Navbar() {
         transition: "all 0.3s ease",
         backdropFilter: scrolled ? "blur(12px)" : "none",
       }}>
-        <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "1rem", color: "var(--fg)", letterSpacing: "-0.02em" }}>
-          FO<span style={{ color: "var(--accent-bright)" }}>.</span>
-        </span>
+        <Link href="/" style={{ textDecoration: "none" }}>
+          <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "1rem", color: "var(--fg)", letterSpacing: "-0.02em" }}>
+            Omotemmy<span style={{ color: "var(--accent-bright)" }}>.</span>
+          </span>
+        </Link>
 
         {/* Desktop nav */}
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }} className="desktop-nav">
-          {links.map(s => (
-            <a key={s} href={`#${s}`} className="nav-link">{s}</a>
+          {navLinks.map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
+              className="nav-link"
+              style={{
+                color: isActive(href) ? "var(--fg)" : undefined,
+                borderBottom: isActive(href) ? "1px solid var(--accent-bright)" : "1px solid transparent",
+                paddingBottom: "2px",
+              }}
+            >
+              {label.toUpperCase()}
+            </Link>
           ))}
           {mounted && (
             <button
@@ -89,19 +126,18 @@ export function Navbar() {
           padding: "1rem 1.5rem 1.5rem",
           display: "flex", flexDirection: "column", gap: "1.2rem",
         }} className="mobile-menu">
-          {links.map(s => (
-            <a
-              key={s}
-              href={`#${s}`}
-              onClick={() => setMenuOpen(false)}
+          {navLinks.map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
               style={{
                 fontSize: "0.75rem", letterSpacing: "0.15em",
-                textTransform: "uppercase", color: "var(--fg-muted)",
+                textTransform: "uppercase", color: isActive(href) ? "var(--fg)" : "var(--fg-muted)",
                 textDecoration: "none", fontFamily: "'DM Mono', monospace",
               }}
             >
-              {s}
-            </a>
+              {label}
+            </Link>
           ))}
         </div>
       )}
