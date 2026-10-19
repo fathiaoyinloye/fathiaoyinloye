@@ -24,7 +24,7 @@ export default function GiveawayTrustCaseStudy() {
               display: "inline-flex", alignItems: "center", gap: "0.4rem",
               fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase",
               color: "var(--fg-subtle)", textDecoration: "none",
-              fontFamily: "'DM Mono', monospace", marginBottom: "2.5rem",
+              fontFamily: "'Inter', sans-serif", fontWeight: 500, marginBottom: "2.5rem",
             }}
           >
             <ArrowLeft size={11} /> BACK TO PROJECTS
@@ -36,7 +36,7 @@ export default function GiveawayTrustCaseStudy() {
               <p className="section-label">QA CASE STUDY — IN PROGRESS</p>
             </div>
             <h1 style={{
-              fontFamily: "'Syne', sans-serif", fontWeight: 800,
+              fontFamily: "'Inter', sans-serif", fontWeight: 700,
               fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>
@@ -59,7 +59,7 @@ export default function GiveawayTrustCaseStudy() {
             display: "flex", alignItems: "center", gap: "0.75rem",
           }}>
             <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#f59e0b", flexShrink: 0, display: "inline-block" }} />
-            <p style={{ fontSize: "0.75rem", color: "var(--fg-muted)", fontFamily: "'DM Mono', monospace", lineHeight: 1.6 }}>
+            <p style={{ fontSize: "0.75rem", color: "var(--fg-muted)", fontFamily: "'Inter', sans-serif", fontWeight: 400, lineHeight: 1.6 }}>
               This project is in active development. The QA activities described below reflect work that has been started. Sections marked as <strong>planned</strong> or <strong>in progress</strong> will be updated as the work is completed.
             </p>
           </div>
@@ -108,7 +108,7 @@ export default function GiveawayTrustCaseStudy() {
                   padding: "0.9rem 0", borderBottom: "1px solid var(--border)",
                   alignItems: "start",
                 }}>
-                  <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--fg-subtle)", fontFamily: "'DM Mono', monospace", paddingTop: "0.1rem" }}>{area}</span>
+                  <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--fg-subtle)", fontFamily: "'JetBrains Mono', monospace", fontWeight: 400, paddingTop: "0.1rem" }}>{area}</span>
                   <span className="tag" style={{ alignSelf: "start", whiteSpace: "nowrap" }}>{status}</span>
                   <span style={{ fontSize: "0.78rem", color: "var(--fg-muted)", lineHeight: 1.7 }}>{detail}</span>
                 </div>
@@ -141,8 +141,8 @@ export default function GiveawayTrustCaseStudy() {
 }
 
 const headingStyle: React.CSSProperties = {
-  fontFamily: "'Syne', sans-serif",
-  fontWeight: 700,
+  fontFamily: "'Inter', sans-serif",
+  fontWeight: 600,
   fontSize: "1.1rem",
   color: "var(--fg)",
   marginBottom: "1rem",

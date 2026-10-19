@@ -19,7 +19,7 @@ export default function SkillsPage() {
           <div style={{ marginBottom: "3rem" }}>
             <p className="section-label" style={{ marginBottom: "0.5rem" }}>SKILLS</p>
             <h1 style={{
-              fontFamily: "'Syne', sans-serif", fontWeight: 800,
+              fontFamily: "'Inter', sans-serif", fontWeight: 700,
               fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>

@@ -51,7 +51,8 @@ export function SkillsList() {
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: var(--fg-subtle);
-          font-family: 'DM Mono', monospace;
+          font-family: 'JetBrains Mono', monospace;
+          font-weight: 400;
         }
         @media (max-width: 600px) {
           .skill-row {

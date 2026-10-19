@@ -21,7 +21,7 @@ export default function ProjectsPage() {
           <div style={{ marginBottom: "3rem" }}>
             <p className="section-label" style={{ marginBottom: "0.5rem" }}>PROJECTS</p>
             <h1 style={{
-              fontFamily: "'Syne', sans-serif", fontWeight: 800,
+              fontFamily: "'Inter', sans-serif", fontWeight: 700,
               fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
                   <div style={{ flex: 1, minWidth: "240px" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.6rem" }}>
                       <h2 style={{
-                        fontFamily: "'Syne', sans-serif", fontWeight: 700,
+                        fontFamily: "'Inter', sans-serif", fontWeight: 600,
                         fontSize: "1.1rem", color: "var(--fg)",
                       }}>
                         {p.name}
@@ -68,7 +68,7 @@ export default function ProjectsPage() {
                         display: "flex", alignItems: "center", gap: "0.4rem",
                         fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase",
                         color: "var(--accent-bright)", textDecoration: "none",
-                        fontFamily: "'DM Mono', monospace",
+                        fontFamily: "'Inter', sans-serif", fontWeight: 500,
                         whiteSpace: "nowrap",
                       }}
                     >

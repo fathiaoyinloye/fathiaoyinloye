@@ -88,7 +88,7 @@ export function Contact() {
     <section id="contact" style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 1.5rem 5rem" }}>
       <div style={{ marginBottom: "2.5rem" }}>
         <p className="section-label" style={{ marginBottom: "0.5rem" }}>04 — CONTACT</p>
-        <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--fg)" }}>
+        <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 700, letterSpacing: "-0.03em", color: "var(--fg)" }}>
           Contact
         </h2>
       </div>
@@ -113,12 +113,12 @@ export function Contact() {
                 <span style={{ color: "var(--accent-bright)", flexShrink: 0 }}>{icon}</span>
                 {href ? (
                   <a href={href} target="_blank" rel="noreferrer"
-                    style={{ fontSize: "0.78rem", color: "var(--fg-muted)", fontFamily: "'DM Mono', monospace", textDecoration: "none", wordBreak: "break-all" }}
+                    style={{ fontSize: "0.78rem", color: "var(--fg-muted)", fontFamily: "'Inter', sans-serif", fontWeight: 500, textDecoration: "none", wordBreak: "break-all" }}
                   >
                     {label}
                   </a>
                 ) : (
-                  <span style={{ fontSize: "0.78rem", color: "var(--fg-muted)", fontFamily: "'DM Mono', monospace" }}>{label}</span>
+                  <span style={{ fontSize: "0.78rem", color: "var(--fg-muted)", fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>{label}</span>
                 )}
               </div>
             ))}
@@ -126,7 +126,7 @@ export function Contact() {
         </div>
 
         <div className="card" style={{ padding: "1.5rem" }}>
-          <p style={{ fontSize: "0.62rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--fg-subtle)", marginBottom: "1.2rem", fontFamily: "'DM Mono', monospace" }}>
+          <p style={{ fontSize: "0.62rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--fg-subtle)", marginBottom: "1.2rem", fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>
             QUICK MESSAGE
           </p>
           <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
@@ -141,7 +141,7 @@ export function Contact() {
               style={{
                 background: "var(--bg)", border: "1px solid var(--border)",
                 borderRadius: "3px", padding: "0.65rem 0.9rem",
-                fontFamily: "'DM Mono', monospace", fontSize: "0.73rem",
+                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "0.73rem",
                 color: "var(--fg)", outline: "none", width: "100%",
               }}
             />
@@ -156,7 +156,7 @@ export function Contact() {
               style={{
                 background: "var(--bg)", border: "1px solid var(--border)",
                 borderRadius: "3px", padding: "0.65rem 0.9rem",
-                fontFamily: "'DM Mono', monospace", fontSize: "0.73rem",
+                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "0.73rem",
                 color: "var(--fg)", outline: "none", width: "100%",
               }}
             />
@@ -170,7 +170,7 @@ export function Contact() {
               style={{
                 background: "var(--bg)", border: "1px solid var(--border)",
                 borderRadius: "3px", padding: "0.65rem 0.9rem",
-                fontFamily: "'DM Mono', monospace", fontSize: "0.73rem",
+                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "0.73rem",
                 color: "var(--fg)", outline: "none", width: "100%", resize: "none",
               }}
             />
@@ -180,7 +180,7 @@ export function Contact() {
               style={{
                 background: "var(--fg)", color: "var(--bg)",
                 padding: "0.75rem", borderRadius: "3px",
-                fontFamily: "'DM Mono', monospace", fontSize: "0.65rem",
+                fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.65rem",
                 letterSpacing: "0.1em",
                 textAlign: "center", display: "block",
                 border: "none", cursor: busy ? "not-allowed" : "pointer",
@@ -195,7 +195,8 @@ export function Contact() {
                 aria-live="polite"
                 style={{
                   fontSize: "0.68rem",
-                  fontFamily: "'DM Mono', monospace",
+                  fontFamily: "'Inter', sans-serif",
+                  fontWeight: 400,
                   lineHeight: 1.7,
                   color: status === "success" ? "#22c55e" : "#ef4444",
                 }}

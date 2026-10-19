@@ -19,7 +19,7 @@ export default function EducationPage() {
           <div style={{ marginBottom: "3rem" }}>
             <p className="section-label" style={{ marginBottom: "0.5rem" }}>EDUCATION</p>
             <h1 style={{
-              fontFamily: "'Syne', sans-serif", fontWeight: 800,
+              fontFamily: "'Inter', sans-serif", fontWeight: 700,
               fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>
@@ -36,20 +36,20 @@ export default function EducationPage() {
                 <div className="edu-inner">
                   <div style={{ flex: 1 }}>
                     <h2 style={{
-                      fontFamily: "'Syne', sans-serif", fontWeight: 700,
+                      fontFamily: "'Inter', sans-serif", fontWeight: 600,
                       fontSize: "1.1rem", color: "var(--fg)", marginBottom: "0.2rem",
                     }}>
                       {e.degree}
                     </h2>
                     <p style={{
                       color: "var(--accent-bright)", fontSize: "0.82rem",
-                      marginBottom: "0.15rem", fontFamily: "'DM Mono', monospace",
+                      marginBottom: "0.15rem", fontFamily: "'Inter', sans-serif", fontWeight: 500,
                     }}>
                       {e.school}
                     </p>
                     <p style={{
                       color: "var(--fg-subtle)", fontSize: "0.68rem",
-                      marginBottom: "1.2rem", fontFamily: "'DM Mono', monospace",
+                      marginBottom: "1.2rem", fontFamily: "'JetBrains Mono', monospace", fontWeight: 400,
                     }}>
                       {e.location} · {e.note}
                     </p>
@@ -62,7 +62,7 @@ export default function EducationPage() {
                   <div style={{
                     background: "var(--tag-bg)", border: "1px solid var(--border)",
                     borderRadius: "3px", padding: "0.3rem 0.8rem",
-                    fontSize: "0.62rem", fontFamily: "'DM Mono', monospace",
+                    fontSize: "0.62rem", fontFamily: "'JetBrains Mono', monospace", fontWeight: 400,
                     color: "var(--fg-subtle)", whiteSpace: "nowrap",
                     alignSelf: "flex-start", flexShrink: 0,
                   }}>

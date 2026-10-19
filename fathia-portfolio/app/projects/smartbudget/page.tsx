@@ -24,7 +24,7 @@ export default function SmartBudgetCaseStudy() {
               display: "inline-flex", alignItems: "center", gap: "0.4rem",
               fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase",
               color: "var(--fg-subtle)", textDecoration: "none",
-              fontFamily: "'DM Mono', monospace", marginBottom: "2.5rem",
+              fontFamily: "'Inter', sans-serif", fontWeight: 500, marginBottom: "2.5rem",
             }}
           >
             <ArrowLeft size={11} /> BACK TO PROJECTS
@@ -36,7 +36,7 @@ export default function SmartBudgetCaseStudy() {
               <p className="section-label">QA CASE STUDY</p>
             </div>
             <h1 style={{
-              fontFamily: "'Syne', sans-serif", fontWeight: 800,
+              fontFamily: "'Inter', sans-serif", fontWeight: 700,
               fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>
@@ -108,8 +108,8 @@ export default function SmartBudgetCaseStudy() {
 }
 
 const headingStyle: React.CSSProperties = {
-  fontFamily: "'Syne', sans-serif",
-  fontWeight: 700,
+  fontFamily: "'Inter', sans-serif",
+  fontWeight: 600,
   fontSize: "1.1rem",
   color: "var(--fg)",
   marginBottom: "1rem",

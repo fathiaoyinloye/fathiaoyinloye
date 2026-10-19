@@ -21,7 +21,7 @@ export function Footer() {
         flexWrap: "wrap",
         gap: "1rem",
       }}>
-        <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "0.9rem", color: "var(--fg)" }}>
+        <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "0.9rem", color: "var(--fg)" }}>
           Omotemmy<span style={{ color: "var(--accent-bright)" }}>.</span>
         </span>
 
@@ -35,7 +35,8 @@ export function Footer() {
               style={{
                 fontSize: "0.68rem",
                 color: "var(--fg-muted)",
-                fontFamily: "'DM Mono', monospace",
+                fontFamily: "'Inter', sans-serif",
+                fontWeight: 500,
                 textDecoration: "none",
               }}
             >
@@ -47,7 +48,8 @@ export function Footer() {
             style={{
               fontSize: "0.68rem",
               color: "var(--fg-muted)",
-              fontFamily: "'DM Mono', monospace",
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: 500,
               textDecoration: "none",
             }}
           >
@@ -55,7 +57,7 @@ export function Footer() {
           </Link>
         </div>
 
-        <span style={{ fontSize: "0.62rem", color: "var(--fg-subtle)", fontFamily: "'DM Mono', monospace" }}>
+        <span style={{ fontSize: "0.62rem", color: "var(--fg-subtle)", fontFamily: "'JetBrains Mono', monospace", fontWeight: 400 }}>
           © {new Date().getFullYear()} Fathia Oyinloye
         </span>
       </div>

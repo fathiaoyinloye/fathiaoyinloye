@@ -24,7 +24,7 @@ export default function MedSyncCaseStudy() {
               display: "inline-flex", alignItems: "center", gap: "0.4rem",
               fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase",
               color: "var(--fg-subtle)", textDecoration: "none",
-              fontFamily: "'DM Mono', monospace", marginBottom: "2.5rem",
+              fontFamily: "'Inter', sans-serif", fontWeight: 500, marginBottom: "2.5rem",
             }}
           >
             <ArrowLeft size={11} /> BACK TO PROJECTS
@@ -36,7 +36,7 @@ export default function MedSyncCaseStudy() {
               <p className="section-label">QA CASE STUDY</p>
             </div>
             <h1 style={{
-              fontFamily: "'Syne', sans-serif", fontWeight: 800,
+              fontFamily: "'Inter', sans-serif", fontWeight: 700,
               fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>
@@ -99,7 +99,7 @@ export default function MedSyncCaseStudy() {
                   display: "grid", gridTemplateColumns: "180px 1fr", gap: "1rem",
                   padding: "0.9rem 0", borderBottom: "1px solid var(--border)",
                 }}>
-                  <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--fg-subtle)", fontFamily: "'DM Mono', monospace", alignSelf: "start", paddingTop: "0.1rem" }}>{area}</span>
+                  <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--fg-subtle)", fontFamily: "'JetBrains Mono', monospace", fontWeight: 400, alignSelf: "start", paddingTop: "0.1rem" }}>{area}</span>
                   <span style={{ fontSize: "0.78rem", color: "var(--fg-muted)", lineHeight: 1.7 }}>{detail}</span>
                 </div>
               ))}
@@ -140,8 +140,8 @@ export default function MedSyncCaseStudy() {
 }
 
 const headingStyle: React.CSSProperties = {
-  fontFamily: "'Syne', sans-serif",
-  fontWeight: 700,
+  fontFamily: "'Inter', sans-serif",
+  fontWeight: 600,
   fontSize: "1.1rem",
   color: "var(--fg)",
   marginBottom: "1rem",
