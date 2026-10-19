@@ -1,5 +1,5 @@
 import { Navbar } from "../../components/Navbar";
-import { Contact } from "../../components/Contact";
+import { Footer } from "../../components/Footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
@@ -33,7 +33,6 @@ export default function GiveawayTrustCaseStudy() {
           {/* Header */}
           <div style={{ marginBottom: "3rem" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "0.8rem" }}>
-              <span style={{ fontSize: "2rem" }}>🎁</span>
               <p className="section-label">QA CASE STUDY — IN PROGRESS</p>
             </div>
             <h1 style={{
@@ -71,32 +70,29 @@ export default function GiveawayTrustCaseStudy() {
           <section style={{ marginBottom: "3rem" }}>
             <h2 style={headingStyle}>Project Overview</h2>
             <p style={bodyStyle}>
-              The Giveaway Trust &amp; Audit Engine is a platform designed to bring transparency and accountability to online giveaways. It provides tooling to audit giveaway processes, verify participant eligibility, and produce trustworthy records of outcomes.
-            </p>
-            <p style={{ ...bodyStyle, marginTop: "1rem" }}>
-              The system is currently in development. The application includes a backend API and an audit log component. As the platform evolves, the QA scope will expand accordingly.
+              A giveaway platform focused on trust and auditability.
             </p>
           </section>
 
-          {/* My Role */}
+          {/* My Contribution */}
           <section style={{ marginBottom: "3rem" }}>
-            <h2 style={headingStyle}>My Role and Contribution</h2>
+            <h2 style={headingStyle}>My Contribution</h2>
             <p style={bodyStyle}>
               I am responsible for the QA process on this project. Work completed so far:
             </p>
             <ul style={listStyle}>
-              <li>Requirements analysis — reviewing the product specification to identify testable requirements and clarify ambiguities</li>
-              <li>Test scope definition — identifying what will and will not be tested, and documenting the rationale for each decision</li>
-              <li>Test planning — defining test objectives, entry and exit criteria, risk areas, and the testing schedule</li>
-              <li>Test case preparation — writing test cases covering the requirements identified in the initial scope</li>
+              <li>Requirements analysis: reviewing the product specification to identify testable requirements and clarify ambiguities</li>
+              <li>Test scope definition: identifying what will and will not be tested, and documenting the rationale for each decision</li>
+              <li>Test planning: defining test objectives, entry and exit criteria, risk areas, and the testing schedule</li>
+              <li>Test case preparation: writing test cases covering the requirements identified in the initial scope</li>
             </ul>
           </section>
 
-          {/* Planned / In Progress */}
+          {/* Testing Plan */}
           <section style={{ marginBottom: "3rem" }}>
-            <h2 style={headingStyle}>Planned and In-Progress Activities</h2>
+            <h2 style={headingStyle}>Testing Plan</h2>
             <p style={{ ...bodyStyle, marginBottom: "1rem" }}>
-              The following activities are planned and will be performed as development progresses:
+              The intended API and UI testing approach is to validate REST API endpoints, request and response contracts, authentication, and error handling using Postman, and to test the front-end interface once it is available. The planned areas are listed below.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
               {[
@@ -120,40 +116,18 @@ export default function GiveawayTrustCaseStudy() {
             </div>
           </section>
 
-          {/* Tools */}
+          {/* Current Status */}
           <section style={{ marginBottom: "3rem" }}>
-            <h2 style={headingStyle}>Tools Used</h2>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
-              {["Postman", "Git", "GitHub"].map(t => (
-                <span key={t} className="tag">{t}</span>
-              ))}
-            </div>
-            <p style={{ ...bodyStyle, marginTop: "0.75rem", fontSize: "0.73rem", color: "var(--fg-subtle)" }}>
-              Additional tools will be confirmed as the testing activities are performed.
+            <h2 style={headingStyle}>Current Status</h2>
+            <p style={bodyStyle}>
+              This project is in progress. Requirements analysis, test scope definition, test planning, and test case preparation have been completed. API testing, UI testing, defect verification, regression testing, and automation have not been completed and will be documented as the work progresses.
             </p>
-          </section>
-
-          {/* What I Need to Fill In */}
-          <section style={{
-            background: "var(--tag-bg)", border: "1px solid var(--border)",
-            borderRadius: "4px", padding: "1.5rem", marginBottom: "3rem",
-          }}>
-            <p style={{ fontSize: "0.62rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--fg-subtle)", fontFamily: "'DM Mono', monospace", marginBottom: "0.8rem" }}>
-              TO FILL IN AS WORK PROGRESSES
-            </p>
-            <ul style={{ ...listStyle, color: "var(--fg-muted)" }}>
-              <li>API endpoints tested and their outcomes</li>
-              <li>Defects found, severity, and resolution status</li>
-              <li>Audit log validation results</li>
-              <li>Test execution summary once testing is complete</li>
-              <li>Link to test plan document (if shareable)</li>
-            </ul>
           </section>
 
         </div>
       </article>
 
-      <Contact />
+      <Footer />
 
       <style>{`
         @media (max-width: 600px) {

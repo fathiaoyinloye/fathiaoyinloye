@@ -1,5 +1,6 @@
 import { Navbar } from "../components/Navbar";
 import { Contact } from "../components/Contact";
+import { Footer } from "../components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,6 +15,8 @@ export default function ContactPage() {
       <div style={{ paddingTop: "5rem" }}>
         <Contact />
       </div>
+
+      <Footer />
     </main>
   );
 }

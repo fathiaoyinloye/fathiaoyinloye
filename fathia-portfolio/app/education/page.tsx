@@ -1,5 +1,5 @@
 import { Navbar } from "../components/Navbar";
-import { Contact } from "../components/Contact";
+import { Footer } from "../components/Footer";
 import { education } from "../data/education";
 import type { Metadata } from "next";
 
@@ -75,7 +75,7 @@ export default function EducationPage() {
         </div>
       </section>
 
-      <Contact />
+      <Footer />
 
       <style>{`
         .edu-inner {

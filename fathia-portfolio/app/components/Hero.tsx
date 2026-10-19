@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const roles = ["QA Engineer", "API Testing & Test Automation"];
+const roles = ["QA Engineer | API Testing and Test Automation"];
 
 export function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -91,36 +91,34 @@ export function Hero() {
             </div>
 
             <p style={{ color: "var(--fg-muted)", lineHeight: 1.8, fontSize: "0.85rem", maxWidth: "480px", marginBottom: "2rem" }}>
-              QA Engineer | API Testing & Test Automation.
-              <br /><br />
-              I am a QA Engineer with a software engineering background, focused on manual testing, API testing, test design, and test automation. I use my technical foundation to investigate application behaviour, identify defects, and validate software functionality and data integrity.
+              I am a QA Engineer with a software engineering background. I focus on understanding requirements, evaluating application behaviour, and identifying risks through thoughtful test design and systematic testing.
               <br /><br />
               Based in <span style={{ color: "var(--fg)" }}>Lagos, Nigeria.</span>
             </p>
 
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
-              <Link href="/contact" style={{
-                background: "var(--fg)", color: "var(--bg)",
-                padding: "0.7rem 1.4rem", borderRadius: "3px",
-                fontFamily: "'DM Mono', monospace", fontSize: "0.65rem",
-                letterSpacing: "0.1em", textDecoration: "none",
-              }}>
-                GET IN TOUCH
-              </Link>
               <Link href="/projects" style={{
-                border: "1px solid var(--border)", color: "var(--fg-muted)",
+                background: "var(--fg)", color: "var(--bg)",
                 padding: "0.7rem 1.4rem", borderRadius: "3px",
                 fontFamily: "'DM Mono', monospace", fontSize: "0.65rem",
                 letterSpacing: "0.1em", textDecoration: "none",
               }}>
                 VIEW PROJECTS
               </Link>
+              <Link href="/contact" style={{
+                border: "1px solid var(--border)", color: "var(--fg-muted)",
+                padding: "0.7rem 1.4rem", borderRadius: "3px",
+                fontFamily: "'DM Mono', monospace", fontSize: "0.65rem",
+                letterSpacing: "0.1em", textDecoration: "none",
+              }}>
+                CONTACT
+              </Link>
             </div>
 
             <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
               {[
                 { label: "GitHub", href: "https://github.com/fathiaoyinloye" },
-                { label: "LinkedIn", href: "https://linkedin.com/in/fathiaoyinloye" },
+                { label: "LinkedIn", href: "https://www.linkedin.com/in/fathia-oyinloye" },
                 { label: "Email", href: "mailto:fathiaoyinloye22@gmail.com" },
               ].map(({ label, href }) => (
                 <a key={label} href={href} target="_blank" rel="noreferrer"

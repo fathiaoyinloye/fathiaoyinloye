@@ -1,5 +1,5 @@
 import { Navbar } from "../components/Navbar";
-import { Contact } from "../components/Contact";
+import { Footer } from "../components/Footer";
 import { SkillsList } from "../components/SkillsList";
 import type { Metadata } from "next";
 
@@ -26,22 +26,15 @@ export default function SkillsPage() {
               What I Test With
             </h1>
             <p style={{ fontSize: "0.85rem", color: "var(--fg-muted)", lineHeight: 1.8, maxWidth: "580px" }}>
-              My core skills are in manual testing, test design, API testing, and database validation. I have working experience with automation using pytest and JUnit 5, and I am actively learning Playwright. Tools marked <em>(in progress)</em> are ones I am currently developing.
+              My core skills are in manual testing, test design, API testing, and database validation. I have working experience with automation using pytest and Cypress.
             </p>
           </div>
 
           <SkillsList />
-
-          <p style={{
-            marginTop: "2.5rem", fontSize: "0.7rem", color: "var(--fg-subtle)",
-            fontFamily: "'DM Mono', monospace", fontStyle: "italic",
-          }}>
-            Skills shown in italics are tools I am currently learning or deepening.
-          </p>
         </div>
       </section>
 
-      <Contact />
+      <Footer />
     </main>
   );
 }

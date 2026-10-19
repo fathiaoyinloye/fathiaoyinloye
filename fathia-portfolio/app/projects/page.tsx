@@ -1,6 +1,6 @@
 import { Navbar } from "../components/Navbar";
-import { Contact } from "../components/Contact";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { Footer } from "../components/Footer";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { projects } from "../data/projects";
 import type { Metadata } from "next";
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
               fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>
-              Things I&apos;ve Tested &amp; Built
+              Things I&apos;ve Tested
             </h1>
             <p style={{ fontSize: "0.85rem", color: "var(--fg-muted)", lineHeight: 1.8, maxWidth: "580px" }}>
               QA case studies and projects that demonstrate my testing approach. Each entry links to a full case study with scope, methods, tools, and outcomes.
@@ -38,7 +38,6 @@ export default function ProjectsPage() {
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1.5rem", flexWrap: "wrap" }}>
                   <div style={{ flex: 1, minWidth: "240px" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.6rem" }}>
-                      <span style={{ fontSize: "1.5rem" }}>{p.emoji}</span>
                       <h2 style={{
                         fontFamily: "'Syne', sans-serif", fontWeight: 700,
                         fontSize: "1.1rem", color: "var(--fg)",
@@ -63,21 +62,6 @@ export default function ProjectsPage() {
                   </div>
 
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", alignItems: "flex-end", flexShrink: 0 }}>
-                    {p.live && (
-                      <a href={p.live} target="_blank" rel="noreferrer"
-                        style={{
-                          display: "flex", alignItems: "center", gap: "0.3rem",
-                          background: "var(--accent-bright)", color: "#fff",
-                          padding: "0.35rem 0.75rem", borderRadius: "3px",
-                          fontSize: "0.6rem", fontFamily: "'DM Mono', monospace",
-                          letterSpacing: "0.08em", textDecoration: "none",
-                          whiteSpace: "nowrap",
-                        }}
-                      >
-                        <ExternalLink size={10} />
-                        LIVE DEMO
-                      </a>
-                    )}
                     <Link
                       href={`/projects/${p.slug}`}
                       style={{
@@ -88,7 +72,7 @@ export default function ProjectsPage() {
                         whiteSpace: "nowrap",
                       }}
                     >
-                      CASE STUDY <ArrowRight size={11} />
+                      VIEW CASE STUDY <ArrowRight size={11} />
                     </Link>
                   </div>
                 </div>
@@ -98,7 +82,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <Contact />
+      <Footer />
 
       <style>{`
         .projects-list {

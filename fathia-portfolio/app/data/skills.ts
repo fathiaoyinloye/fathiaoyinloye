@@ -5,16 +5,15 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    label: "Testing",
+    label: "Testing and Test Design",
     skills: [
+      "Manual Testing",
       "Functional Testing",
       "Regression Testing",
       "Exploratory Testing",
-      "Boundary and Negative Testing",
-      "Integration Testing",
-      "Test Planning",
       "Test Case Design",
-      "Requirements Analysis",
+      "Boundary Value Analysis",
+      "Negative Testing",
       "Defect Reporting",
     ],
   },
@@ -23,33 +22,23 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       "Postman",
       "REST API Testing",
-      "HTTP Status Codes",
-      "JWT Authentication",
-      "RBAC Testing",
-      "SQL and Database Validation",
-    ],
-  },
-  {
-    label: "Automation",
-    skills: ["pytest", "JUnit 5", "Cypress", "Mockito", "Playwright (in progress)"],
-  },
-  {
-    label: "Technical Foundation",
-    skills: [
-      "Python",
-      "Java",
-      "JavaScript",
-      "TypeScript",
       "SQL",
-      "Spring Boot",
-      "Django",
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB",
+      "Database Validation",
+      "Authentication and Authorisation Testing",
     ],
   },
   {
-    label: "Tools and Collaboration",
-    skills: ["Git", "GitHub", "GitHub Actions", "Docker", "Agile/Scrum"],
+    label: "Automation and Engineering Foundation",
+    skills: [
+      "pytest",
+      "JUnit 5",
+      "Cypress",
+      "Playwright",
+      "Java",
+      "Python",
+      "JavaScript and TypeScript",
+      "Git",
+      "CI/CD",
+    ],
   },
 ];

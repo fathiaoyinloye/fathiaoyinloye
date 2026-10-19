@@ -1,7 +1,8 @@
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
+import { TestingProcess } from "./components/TestingProcess";
+import { Footer } from "./components/Footer";
 import Link from "next/link";
 
 export default function Home() {
@@ -39,7 +40,9 @@ export default function Home() {
         </Link>
       </div>
 
-      <Contact />
+      <TestingProcess />
+
+      <Footer />
     </main>
   );
 }
