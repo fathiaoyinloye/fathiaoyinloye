@@ -13,9 +13,12 @@ const CONTACT_EMAIL = "fathiaoyinloye22@gmail.com";
 // public form identifier, not a secret, and no credentials are committed here.
 const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
 
+type FormspreeError = { field?: string; message?: string };
+
 export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState("");
@@ -24,8 +27,18 @@ export function Contact() {
   function validate(): string | null {
     if (name.trim().length < 2) return "Please enter your name.";
     if (!EMAIL_PATTERN.test(email.trim())) return "Please enter a valid email address.";
+    if (subject.trim().length < 3) return "Please enter a subject.";
     if (message.trim().length < 10) return "Please enter a message of at least 10 characters.";
     return null;
+  }
+
+  function describeErrors(errors: FormspreeError[]): string | null {
+    if (!errors.length) return null;
+    const first = errors[0];
+    if (!first?.message) return null;
+    return first.field
+      ? `${first.field.charAt(0).toUpperCase()}${first.field.slice(1)}: ${first.message}.`
+      : `${first.message}.`;
   }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -60,12 +73,24 @@ export function Contact() {
         body: JSON.stringify({
           name: name.trim(),
           email: email.trim(),
+          subject: subject.trim(),
           message: message.trim(),
         }),
       });
 
-      if (!response.ok) {
-        throw new Error(`Request failed with status ${response.status}`);
+      const payload = await response.json().catch(() => null);
+      const errors: FormspreeError[] = Array.isArray(payload?.errors) ? payload.errors : [];
+
+      if (!response.ok || errors.length || payload?.ok === false) {
+        const described = describeErrors(errors);
+        setStatus("error");
+        setFeedback(
+          described ??
+          (response.status === 429
+            ? "Too many messages were sent from this address. Please try again later or email me directly."
+            : "Something went wrong while sending your message. Please try again or email me directly.")
+        );
+        return;
       }
 
       setStatus("success");
@@ -73,6 +98,7 @@ export function Contact() {
       setSubmitted(true);
       setName("");
       setEmail("");
+      setSubject("");
       setMessage("");
     } catch {
       setStatus("error");
@@ -129,13 +155,14 @@ export function Contact() {
           <p style={{ fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--fg-subtle)", marginBottom: "1.2rem", fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>
             QUICK MESSAGE
           </p>
-          <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+          <form onSubmit={handleSubmit} aria-busy={status === "submitting"} style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
             <input
               type="text"
               name="name"
               placeholder="Your name"
               aria-label="Your name"
               autoComplete="name"
+              required
               value={name}
               onChange={(e) => setName(e.target.value)}
               style={{
@@ -151,8 +178,24 @@ export function Contact() {
               placeholder="Your email"
               aria-label="Your email"
               autoComplete="email"
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              style={{
+                background: "var(--bg)", border: "1px solid var(--border)",
+                borderRadius: "3px", padding: "0.65rem 0.9rem",
+                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "1rem",
+                color: "var(--fg)", outline: "none", width: "100%",
+              }}
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              aria-label="Subject"
+              required
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               style={{
                 background: "var(--bg)", border: "1px solid var(--border)",
                 borderRadius: "3px", padding: "0.65rem 0.9rem",
@@ -165,6 +208,7 @@ export function Contact() {
               placeholder="Your message"
               aria-label="Your message"
               rows={4}
+              required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               style={{
