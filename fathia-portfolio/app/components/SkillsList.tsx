@@ -47,7 +47,7 @@ export function SkillsList() {
           align-items: center;
         }
         .skill-label {
-          font-size: 0.62rem;
+          font-size: 0.72rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: var(--fg-subtle);

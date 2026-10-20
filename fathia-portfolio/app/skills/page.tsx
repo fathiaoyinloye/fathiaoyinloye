@@ -20,12 +20,12 @@ export default function SkillsPage() {
             <p className="section-label" style={{ marginBottom: "0.5rem" }}>SKILLS</p>
             <h1 style={{
               fontFamily: "'Inter', sans-serif", fontWeight: 700,
-              fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
+              fontSize: "clamp(2rem, 4.5vw, 2.625rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>
               What I Test With
             </h1>
-            <p style={{ fontSize: "0.85rem", color: "var(--fg-muted)", lineHeight: 1.8, maxWidth: "580px" }}>
+            <p style={{ fontSize: "1rem", color: "var(--fg-muted)", lineHeight: 1.8, maxWidth: "620px" }}>
               My core skills are in manual testing, test design, API testing, and database validation. I have working experience with automation using pytest and Cypress.
             </p>
           </div>

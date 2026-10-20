@@ -22,12 +22,12 @@ export default function ProjectsPage() {
             <p className="section-label" style={{ marginBottom: "0.5rem" }}>PROJECTS</p>
             <h1 style={{
               fontFamily: "'Inter', sans-serif", fontWeight: 700,
-              fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
+              fontSize: "clamp(2rem, 4.5vw, 2.625rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>
               Things I&apos;ve Tested
             </h1>
-            <p style={{ fontSize: "0.85rem", color: "var(--fg-muted)", lineHeight: 1.8, maxWidth: "580px" }}>
+            <p style={{ fontSize: "1rem", color: "var(--fg-muted)", lineHeight: 1.8, maxWidth: "620px" }}>
               QA case studies and projects that demonstrate my testing approach. Each entry links to a full case study with scope, methods, tools, and outcomes.
             </p>
           </div>
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
                     <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.6rem" }}>
                       <h2 style={{
                         fontFamily: "'Inter', sans-serif", fontWeight: 600,
-                        fontSize: "1.1rem", color: "var(--fg)",
+                        fontSize: "1.2rem", color: "var(--fg)", letterSpacing: "-0.01em",
                       }}>
                         {p.name}
                       </h2>
@@ -48,13 +48,13 @@ export default function ProjectsPage() {
                         <span className="tag" style={{ background: "var(--tag-bg)", color: "var(--fg-muted)" }}>IN PROGRESS</span>
                       )}
                     </div>
-                    <p style={{ fontSize: "0.82rem", color: "var(--fg-muted)", lineHeight: 1.8, marginBottom: "0.75rem", maxWidth: "520px" }}>
+                    <p style={{ fontSize: "1rem", color: "var(--fg-muted)", lineHeight: 1.75, marginBottom: "0.75rem", maxWidth: "560px" }}>
                       {p.desc}
                     </p>
-                    <p style={{ fontSize: "0.73rem", color: "var(--fg-subtle)", lineHeight: 1.7, marginBottom: "1.2rem", maxWidth: "520px" }}>
+                    <p style={{ fontSize: "0.95rem", color: "var(--fg-subtle)", lineHeight: 1.7, marginBottom: "1.25rem", maxWidth: "560px" }}>
                       {p.detail}
                     </p>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
                       {p.tags.filter(t => t !== "In Progress").map(t => (
                         <span key={t} className="tag">{t}</span>
                       ))}
@@ -64,10 +64,10 @@ export default function ProjectsPage() {
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", alignItems: "flex-end", flexShrink: 0 }}>
                     <Link
                       href={`/projects/${p.slug}`}
+                      className="link-accent"
                       style={{
                         display: "flex", alignItems: "center", gap: "0.4rem",
-                        fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase",
-                        color: "var(--accent-bright)", textDecoration: "none",
+                        fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase",
                         fontFamily: "'Inter', sans-serif", fontWeight: 500,
                         whiteSpace: "nowrap",
                       }}

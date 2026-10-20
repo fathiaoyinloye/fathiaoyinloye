@@ -22,9 +22,9 @@ export default function MedSyncCaseStudy() {
             href="/projects"
             style={{
               display: "inline-flex", alignItems: "center", gap: "0.4rem",
-              fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase",
+              fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase",
               color: "var(--fg-subtle)", textDecoration: "none",
-              fontFamily: "'Inter', sans-serif", fontWeight: 500, marginBottom: "2.5rem",
+              fontFamily: "'JetBrains Mono', monospace", fontWeight: 400, marginBottom: "2.5rem",
             }}
           >
             <ArrowLeft size={11} /> BACK TO PROJECTS
@@ -37,12 +37,12 @@ export default function MedSyncCaseStudy() {
             </div>
             <h1 style={{
               fontFamily: "'Inter', sans-serif", fontWeight: 700,
-              fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
+              fontSize: "clamp(2rem, 4.5vw, 2.625rem)",
               letterSpacing: "-0.03em", color: "var(--fg)", marginBottom: "1rem",
             }}>
               MedSync
             </h1>
-            <p style={{ fontSize: "0.9rem", color: "var(--fg-muted)", lineHeight: 1.8, maxWidth: "640px" }}>
+            <p style={{ fontSize: "1rem", color: "var(--fg-muted)", lineHeight: 1.8, maxWidth: "660px" }}>
               Multi-tenant electronic medical records and hospital management system.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginTop: "1rem" }}>
@@ -99,8 +99,8 @@ export default function MedSyncCaseStudy() {
                   display: "grid", gridTemplateColumns: "180px 1fr", gap: "1rem",
                   padding: "0.9rem 0", borderBottom: "1px solid var(--border)",
                 }}>
-                  <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--fg-subtle)", fontFamily: "'JetBrains Mono', monospace", fontWeight: 400, alignSelf: "start", paddingTop: "0.1rem" }}>{area}</span>
-                  <span style={{ fontSize: "0.78rem", color: "var(--fg-muted)", lineHeight: 1.7 }}>{detail}</span>
+                  <span style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--fg-subtle)", fontFamily: "'JetBrains Mono', monospace", fontWeight: 400, alignSelf: "start", paddingTop: "0.1rem" }}>{area}</span>
+                  <span style={{ fontSize: "1rem", color: "var(--fg-muted)", lineHeight: 1.8 }}>{detail}</span>
                 </div>
               ))}
             </div>
@@ -142,20 +142,20 @@ export default function MedSyncCaseStudy() {
 const headingStyle: React.CSSProperties = {
   fontFamily: "'Inter', sans-serif",
   fontWeight: 600,
-  fontSize: "1.1rem",
+  fontSize: "1.2rem",
   color: "var(--fg)",
   marginBottom: "1rem",
   letterSpacing: "-0.02em",
 };
 
 const bodyStyle: React.CSSProperties = {
-  fontSize: "0.85rem",
+  fontSize: "1rem",
   color: "var(--fg-muted)",
   lineHeight: 1.9,
 };
 
 const listStyle: React.CSSProperties = {
-  fontSize: "0.82rem",
+  fontSize: "1rem",
   color: "var(--fg-muted)",
   lineHeight: 1.9,
   paddingLeft: "1.4rem",

@@ -54,7 +54,7 @@ export function Navbar() {
         backdropFilter: scrolled ? "blur(12px)" : "none",
       }}>
         <Link href="/" style={{ textDecoration: "none" }}>
-          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1rem", color: "var(--fg)", letterSpacing: "-0.02em" }}>
+          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1.1rem", color: "var(--fg)", letterSpacing: "-0.02em" }}>
             Omotemmy<span style={{ color: "var(--accent-bright)" }}>.</span>
           </span>
         </Link>
@@ -131,7 +131,7 @@ export function Navbar() {
               key={href}
               href={href}
               style={{
-                fontSize: "0.75rem", letterSpacing: "0.15em",
+                fontSize: "0.78rem", letterSpacing: "0.15em",
                 textTransform: "uppercase", color: isActive(href) ? "var(--fg)" : "var(--fg-muted)",
                 textDecoration: "none", fontFamily: "'Inter', sans-serif", fontWeight: 500,
               }}

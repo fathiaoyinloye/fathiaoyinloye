@@ -84,13 +84,13 @@ export function Hero() {
             </h1>
 
             <div style={{ height: "2rem", marginBottom: "1.2rem", display: "flex", alignItems: "center" }}>
-              <span style={{ fontFamily: "'Inter', sans-serif", fontStyle: "italic", fontSize: "clamp(1rem, 3vw, 1.3rem)", color: "var(--fg-muted)" }}>
+              <span style={{ fontFamily: "'Inter', sans-serif", fontStyle: "italic", fontSize: "clamp(1.05rem, 3vw, 1.35rem)", color: "var(--fg-muted)" }}>
                 {displayed}
               </span>
               <span className="cursor-blink" style={{ display: "inline-block", width: "2px", height: "1.1rem", background: "var(--accent-bright)", marginLeft: "2px" }} />
             </div>
 
-            <p style={{ color: "var(--fg-muted)", lineHeight: 1.8, fontSize: "0.85rem", maxWidth: "480px", marginBottom: "2rem" }}>
+            <p style={{ color: "var(--fg-muted)", lineHeight: 1.85, fontSize: "1rem", maxWidth: "520px", marginBottom: "2rem" }}>
               I am a QA Engineer with a software engineering background. I focus on understanding requirements, evaluating application behaviour, and identifying risks through thoughtful test design and systematic testing.
               <br /><br />
               Based in <span style={{ color: "var(--fg)" }}>Lagos, Nigeria.</span>
@@ -99,16 +99,16 @@ export function Hero() {
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
               <Link href="/projects" style={{
                 background: "var(--fg)", color: "var(--bg)",
-                padding: "0.7rem 1.4rem", borderRadius: "3px",
-                fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.65rem",
+                padding: "0.75rem 1.5rem", borderRadius: "3px",
+                fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.78rem",
                 letterSpacing: "0.1em", textDecoration: "none",
               }}>
                 VIEW PROJECTS
               </Link>
               <Link href="/contact" style={{
                 border: "1px solid var(--border)", color: "var(--fg-muted)",
-                padding: "0.7rem 1.4rem", borderRadius: "3px",
-                fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.65rem",
+                padding: "0.75rem 1.5rem", borderRadius: "3px",
+                fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.78rem",
                 letterSpacing: "0.1em", textDecoration: "none",
               }}>
                 CONTACT
@@ -122,7 +122,7 @@ export function Hero() {
                 { label: "Email", href: "mailto:fathiaoyinloye22@gmail.com" },
               ].map(({ label, href }) => (
                 <a key={label} href={href} target="_blank" rel="noreferrer"
-                  style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.6rem", letterSpacing: "0.15em", color: "var(--fg-subtle)", textDecoration: "none", textTransform: "uppercase" }}
+                  style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.78rem", letterSpacing: "0.15em", color: "var(--fg-subtle)", textDecoration: "none", textTransform: "uppercase" }}
                 >
                   {label}
                 </a>

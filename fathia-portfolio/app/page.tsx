@@ -7,15 +7,17 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <Navbar />
       <Hero />
       <Projects />
 
       {/* Link to full projects page */}
       <div style={{
-        background: "var(--bg-secondary)",
-        paddingBottom: "3rem",
+        background: "var(--bg)",
+        borderTop: "1px solid var(--border)",
+        borderBottom: "1px solid var(--border)",
+        padding: "3rem 1.5rem",
         display: "flex",
         justifyContent: "center",
       }}>
@@ -24,11 +26,11 @@ export default function Home() {
           style={{
             border: "1px solid var(--border)",
             color: "var(--fg-muted)",
-            padding: "0.7rem 1.6rem",
+            padding: "0.75rem 1.6rem",
             borderRadius: "3px",
             fontFamily: "'Inter', sans-serif",
             fontWeight: 500,
-            fontSize: "0.65rem",
+            fontSize: "0.78rem",
             letterSpacing: "0.1em",
             textDecoration: "none",
             display: "inline-flex",

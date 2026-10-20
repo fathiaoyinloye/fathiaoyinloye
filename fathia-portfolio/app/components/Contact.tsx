@@ -88,14 +88,14 @@ export function Contact() {
     <section id="contact" style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 1.5rem 5rem" }}>
       <div style={{ marginBottom: "2.5rem" }}>
         <p className="section-label" style={{ marginBottom: "0.5rem" }}>04 — CONTACT</p>
-        <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 700, letterSpacing: "-0.03em", color: "var(--fg)" }}>
+        <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.625rem)", fontWeight: 700, letterSpacing: "-0.03em", color: "var(--fg)" }}>
           Contact
         </h2>
       </div>
 
       <div className="contact-grid">
         <div>
-          <p style={{ fontSize: "0.85rem", color: "var(--fg-muted)", lineHeight: 1.9, marginBottom: "2rem" }}>
+          <p style={{ fontSize: "1rem", color: "var(--fg-muted)", lineHeight: 1.85, marginBottom: "2rem" }}>
             I&apos;m open to full-time QA roles, internships, and interesting collaborations.
             If you&apos;re building something and need a QA engineer who understands requirements,
             designs meaningful test scenarios, and verifies fixes, I&apos;d love to hear from you.
@@ -113,20 +113,20 @@ export function Contact() {
                 <span style={{ color: "var(--accent-bright)", flexShrink: 0 }}>{icon}</span>
                 {href ? (
                   <a href={href} target="_blank" rel="noreferrer"
-                    style={{ fontSize: "0.78rem", color: "var(--fg-muted)", fontFamily: "'Inter', sans-serif", fontWeight: 500, textDecoration: "none", wordBreak: "break-all" }}
+                    style={{ fontSize: "0.95rem", color: "var(--fg-muted)", fontFamily: "'Inter', sans-serif", fontWeight: 500, textDecoration: "none", wordBreak: "break-all" }}
                   >
                     {label}
                   </a>
                 ) : (
-                  <span style={{ fontSize: "0.78rem", color: "var(--fg-muted)", fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>{label}</span>
+                  <span style={{ fontSize: "0.95rem", color: "var(--fg-muted)", fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>{label}</span>
                 )}
               </div>
             ))}
           </div>
         </div>
 
-        <div className="card" style={{ padding: "1.5rem" }}>
-          <p style={{ fontSize: "0.62rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--fg-subtle)", marginBottom: "1.2rem", fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>
+        <div className="card" style={{ padding: "1.75rem 1.9rem" }}>
+          <p style={{ fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--fg-subtle)", marginBottom: "1.2rem", fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>
             QUICK MESSAGE
           </p>
           <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
@@ -141,7 +141,7 @@ export function Contact() {
               style={{
                 background: "var(--bg)", border: "1px solid var(--border)",
                 borderRadius: "3px", padding: "0.65rem 0.9rem",
-                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "0.73rem",
+                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "1rem",
                 color: "var(--fg)", outline: "none", width: "100%",
               }}
             />
@@ -156,7 +156,7 @@ export function Contact() {
               style={{
                 background: "var(--bg)", border: "1px solid var(--border)",
                 borderRadius: "3px", padding: "0.65rem 0.9rem",
-                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "0.73rem",
+                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "1rem",
                 color: "var(--fg)", outline: "none", width: "100%",
               }}
             />
@@ -170,7 +170,7 @@ export function Contact() {
               style={{
                 background: "var(--bg)", border: "1px solid var(--border)",
                 borderRadius: "3px", padding: "0.65rem 0.9rem",
-                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "0.73rem",
+                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "1rem",
                 color: "var(--fg)", outline: "none", width: "100%", resize: "none",
               }}
             />
@@ -180,7 +180,7 @@ export function Contact() {
               style={{
                 background: "var(--fg)", color: "var(--bg)",
                 padding: "0.75rem", borderRadius: "3px",
-                fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.65rem",
+                fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.78rem",
                 letterSpacing: "0.1em",
                 textAlign: "center", display: "block",
                 border: "none", cursor: busy ? "not-allowed" : "pointer",
@@ -194,7 +194,7 @@ export function Contact() {
                 role="status"
                 aria-live="polite"
                 style={{
-                  fontSize: "0.68rem",
+                  fontSize: "0.85rem",
                   fontFamily: "'Inter', sans-serif",
                   fontWeight: 400,
                   lineHeight: 1.7,

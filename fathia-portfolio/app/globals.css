@@ -13,6 +13,7 @@
   --card: #ffffff;
   --tag-bg: #e8e6e0;
   --tag-fg: #3a3a3a;
+  --grid-line: rgba(15, 15, 15, 0.05);
 }
 
 .dark {
@@ -27,6 +28,7 @@
   --card: #141414;
   --tag-bg: #1e1e1e;
   --tag-fg: #c0bdb8;
+  --grid-line: rgba(240, 237, 232, 0.05);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,6 +42,9 @@ body {
   color: var(--fg);
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 }
@@ -52,6 +57,21 @@ h1, h2, h3, h4 {
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* Subtle technical grid behind home page content */
+.home-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(120% 80% at 50% 35%, #000 45%, transparent 100%);
+  mask-image: radial-gradient(120% 80% at 50% 35%, #000 45%, transparent 100%);
+}
 
 /* Noise texture overlay */
 body::before {
@@ -86,8 +106,8 @@ body::before {
 .section-label {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--fg-subtle);
 }
@@ -96,12 +116,13 @@ body::before {
   display: inline-block;
   background: var(--tag-bg);
   color: var(--tag-fg);
-  font-size: 0.65rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  padding: 0.2rem 0.6rem;
+  padding: 0.22rem 0.65rem;
   border-radius: 2px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 .card {
@@ -119,7 +140,7 @@ body::before {
 .nav-link {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -128,6 +149,17 @@ body::before {
 }
 
 .nav-link:hover { color: var(--fg); }
+
+.link-accent {
+  color: var(--accent-bright);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.link-accent:hover {
+  border-bottom-color: var(--accent-bright);
+}
 
 .available-dot {
   width: 7px;

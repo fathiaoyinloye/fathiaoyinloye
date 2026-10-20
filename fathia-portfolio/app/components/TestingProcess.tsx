@@ -26,21 +26,21 @@ export function TestingProcess() {
     <section id="testing-process" style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 1.5rem" }}>
       <div style={{ marginBottom: "2.5rem" }}>
         <p className="section-label" style={{ marginBottom: "0.5rem" }}>02 — TESTING PROCESS</p>
-        <h2 style={{ fontSize: "clamp(1.6rem, 5vw, 2.2rem)", fontWeight: 700, letterSpacing: "-0.03em", color: "var(--fg)" }}>
+        <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.625rem)", fontWeight: 700, letterSpacing: "-0.03em", color: "var(--fg)" }}>
           My Testing Process
         </h2>
       </div>
 
       <div className="process-grid">
         {steps.map((step, i) => (
-          <div key={i} className="card" style={{ padding: "1.5rem" }}>
+          <div key={i} className="card" style={{ padding: "1.75rem 1.9rem" }}>
             <p style={{
-              fontFamily: "'JetBrains Mono', monospace", fontWeight: 400, fontSize: "0.62rem",
-              letterSpacing: "0.15em", color: "var(--accent-bright)", marginBottom: "0.6rem",
+              fontFamily: "'JetBrains Mono', monospace", fontWeight: 400, fontSize: "0.72rem",
+              letterSpacing: "0.15em", color: "var(--accent-bright)", marginBottom: "0.7rem",
             }}>
               {step.number}
             </p>
-            <p style={{ fontSize: "0.78rem", color: "var(--fg-muted)", lineHeight: 1.7 }}>
+            <p style={{ fontSize: "1rem", color: "var(--fg-muted)", lineHeight: 1.8 }}>
               {step.detail}
             </p>
           </div>
