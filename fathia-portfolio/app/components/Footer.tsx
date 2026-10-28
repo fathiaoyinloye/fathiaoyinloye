@@ -59,7 +59,7 @@ export function Footer() {
           </Link>
         </div>
 
-        <span style={{ fontSize: "0.72rem", color: "var(--fg-subtle)", fontFamily: "'JetBrains Mono', monospace", fontWeight: 400 }}>
+        <span style={{ fontSize: "0.72rem", color: "var(--fg-muted)", fontFamily: "'JetBrains Mono', monospace", fontWeight: 400 }}>
           © {new Date().getFullYear()} Fathia Oyinloye
         </span>
       </div>

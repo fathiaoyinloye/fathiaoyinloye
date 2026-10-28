@@ -24,7 +24,7 @@ export default function SkillsPage() {
             }}>
               What I Test With
             </h1>
-            <p style={{ fontSize: "1rem", color: "var(--fg-muted)", lineHeight: 1.8, maxWidth: "620px" }}>
+            <p style={{ fontSize: "1rem", color: "var(--fg)", lineHeight: 1.8, maxWidth: "620px" }}>
               My core skills are in manual testing, test design, API testing, and database validation. I have working experience with automation using pytest and Cypress.
             </p>
           </div>

@@ -76,12 +76,14 @@ export function Navbar() {
                 if (!isActive(href)) {
                   e.currentTarget.style.color = "var(--accent-bright)";
                   e.currentTarget.style.textDecoration = "underline";
+                  e.currentTarget.style.fontWeight = "500";
                 }
               }}
               onMouseOut={e => {
                 if (!isActive(href)) {
                   e.currentTarget.style.color = "var(--fg-muted)";
                   e.currentTarget.style.textDecoration = "none";
+                  e.currentTarget.style.fontWeight = "500";
                 }
               }}
             >

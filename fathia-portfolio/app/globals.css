@@ -109,7 +109,7 @@ body::before {
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--fg-subtle);
+  color: var(--fg-muted);
 }
 
 .tag {
@@ -145,10 +145,16 @@ body::before {
   text-transform: uppercase;
   color: var(--fg-muted);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.nav-link:hover { color: var(--fg); }
+.nav-link:hover { color: var(--accent-bright); }
+
+.nav-link:focus-visible {
+  color: var(--accent-bright);
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
 
 .link-accent {
   color: var(--accent-bright);
@@ -194,6 +200,13 @@ footer a:focus-visible {
 footer a:focus-visible {
   outline: 2px solid var(--accent-bright) !important;
   outline-offset: 2px;
+}
+
+/* Homepage social links focus state */
+.hero a:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+  color: var(--accent-bright);
 }
 
 .photo-frame {

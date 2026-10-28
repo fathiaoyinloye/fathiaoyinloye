@@ -96,7 +96,7 @@ export function Hero() {
               Based in <span style={{ color: "var(--fg)" }}>Lagos, Nigeria.</span>
             </p>
 
-            <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
+            <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
               <Link href="/projects" style={{
                 background: "var(--fg)", color: "var(--bg)",
                 padding: "0.75rem 1.5rem", borderRadius: "3px",
@@ -110,6 +110,7 @@ export function Hero() {
                 padding: "0.75rem 1.5rem", borderRadius: "3px",
                 fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.78rem",
                 letterSpacing: "0.1em", textDecoration: "none",
+                transition: "color 0.2s ease, border-color 0.2s ease",
               }}>
                 CONTACT
               </Link>
@@ -122,7 +123,9 @@ export function Hero() {
                 { label: "Email", href: "mailto:fathiaoyinloye22@gmail.com" },
               ].map(({ label, href }) => (
                 <a key={label} href={href} target="_blank" rel="noreferrer"
-                  style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.78rem", letterSpacing: "0.15em", color: "var(--fg)", textDecoration: "none", textTransform: "uppercase", transition: "color 0.2s ease" }}
+                  style={{
+                    fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.78rem", letterSpacing: "0.15em", color: "var(--fg)", textDecoration: "none", textTransform: "uppercase", transition: "color 0.2s ease",
+                  }}
                   onMouseOver={e => {
                     e.currentTarget.style.color = "var(--accent-bright)";
                     e.currentTarget.style.textDecoration = "underline";
@@ -130,7 +133,8 @@ export function Hero() {
                   onMouseOut={e => {
                     e.currentTarget.style.color = "var(--fg)";
                     e.currentTarget.style.textDecoration = "none";
-                  }}>
+                  }}
+                >
                   {label}
                 </a>
               ))}

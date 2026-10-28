@@ -21,11 +21,11 @@ export function Projects() {
                   {p.name}
                 </h3>
                 <p style={{ fontSize: "1rem", color: "var(--fg-muted)", lineHeight: 1.75, marginBottom: "0.5rem" }}>{p.desc}</p>
-                <p style={{ fontSize: "0.95rem", color: "var(--fg-subtle)", lineHeight: 1.7 }}>{p.detail}</p>
+                <p style={{ fontSize: "0.95rem", color: "var(--fg-muted)", lineHeight: 1.7, marginBottom: "1.25rem" }}>{p.detail}</p>
               </div>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
-                {p.tags.map(t => <span key={t} className="tag" style={{ color: "var(--fg-muted)" }}>{t}</span>)}
+                {p.tags.map(t => <span key={t} className="tag" style={{ color: "var(--fg)" }}>{t}</span>)}
               </div>
 
               <Link

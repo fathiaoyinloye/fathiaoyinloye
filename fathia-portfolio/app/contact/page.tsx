@@ -13,6 +13,7 @@ export default function ContactPage() {
     <main>
       <Navbar />
       <div style={{ paddingTop: "5rem" }}>
+        {/* Section label "04 — CONTACT" removed as it repeats the "Contact" heading */}
         <Contact />
       </div>
 
