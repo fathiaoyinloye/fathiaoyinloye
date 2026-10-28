@@ -17,7 +17,6 @@ export default function EducationPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
 
           <div style={{ marginBottom: "3rem" }}>
-            <p className="section-label" style={{ marginBottom: "0.5rem", color: "var(--fg)" }}>EDUCATION</p>
             <h1 style={{
               fontFamily: "'Inter', sans-serif", fontWeight: 700,
               fontSize: "clamp(2rem, 4.5vw, 2.625rem)",
