@@ -26,7 +26,7 @@ export function Footer() {
         </span>
 
         <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap" }}>
-          {footerLinks.map(({ label, href }) => (
+{footerLinks.map(({ label, href }) => (
             <a
               key={label}
               href={href}
@@ -34,23 +34,25 @@ export function Footer() {
               rel={href.startsWith("http") ? "noreferrer" : undefined}
               style={{
                 fontSize: "0.85rem",
-                color: "var(--fg-muted)",
+                color: "var(--fg)",
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: 500,
                 textDecoration: "none",
+                transition: "color 0.2s ease",
               }}
             >
               {label}
             </a>
           ))}
-          <Link
+<Link
             href="/contact"
             style={{
               fontSize: "0.85rem",
-              color: "var(--fg-muted)",
+              color: "var(--fg)",
               fontFamily: "'Inter', sans-serif",
               fontWeight: 500,
               textDecoration: "none",
+              transition: "color 0.2s ease",
             }}
           >
             Contact

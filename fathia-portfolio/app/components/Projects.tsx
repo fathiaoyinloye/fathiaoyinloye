@@ -8,7 +8,6 @@ export function Projects() {
     <section id="projects" style={{ background: "var(--bg-secondary)", padding: "5rem 0" }}>
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 1.5rem" }}>
         <div style={{ marginBottom: "2.5rem" }}>
-          <p className="section-label" style={{ marginBottom: "0.5rem" }}>01 — PROJECTS</p>
           <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.625rem)", fontWeight: 700, letterSpacing: "-0.03em", color: "var(--fg)" }}>
             Things I&apos;ve Tested
           </h2>
@@ -26,7 +25,7 @@ export function Projects() {
               </div>
 
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
-                {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
+                {p.tags.map(t => <span key={t} className="tag" style={{ color: "var(--fg-muted)" }}>{t}</span>)}
               </div>
 
               <Link

@@ -19,7 +19,6 @@ export default function ProjectsPage() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
 
           <div style={{ marginBottom: "3rem" }}>
-            <p className="section-label" style={{ marginBottom: "0.5rem" }}>PROJECTS</p>
             <h1 style={{
               fontFamily: "'Inter', sans-serif", fontWeight: 700,
               fontSize: "clamp(2rem, 4.5vw, 2.625rem)",
@@ -56,7 +55,7 @@ export default function ProjectsPage() {
                     </p>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
                       {p.tags.filter(t => t !== "In Progress").map(t => (
-                        <span key={t} className="tag">{t}</span>
+                        <span key={t} className="tag" style={{ color: "var(--fg-muted)" }}>{t}</span>
                       ))}
                     </div>
                   </div>

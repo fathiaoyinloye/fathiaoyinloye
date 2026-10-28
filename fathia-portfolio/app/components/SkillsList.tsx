@@ -6,28 +6,43 @@ export function SkillsList() {
     <div style={{ display: "flex", flexDirection: "column" }}>
       {skillGroups.map((group, i) => (
         <div key={i} className="skill-row">
-          <span className="skill-label">{group.label}</span>
+          <span className="skill-label" style={{ color: "var(--fg)" }}>{group.label}</span>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
             {group.skills.map(s => {
               const isLearning = s.toLowerCase().includes("in progress");
+              const tagStyles = {
+                transition: "background 0.2s, color 0.2s",
+                cursor: "default",
+                opacity: isLearning ? 0.7 : 1,
+                fontStyle: isLearning ? "italic" : "normal",
+              };
+              const onTagMouseOver = (e: React.MouseEvent<HTMLSpanElement>) => {
+                e.currentTarget.style.background = "var(--accent-bright)";
+                e.currentTarget.style.color = "#fff";
+              };
+              const onTagMouseOut = (e: React.MouseEvent<HTMLSpanElement>) => {
+                e.currentTarget.style.background = "var(--tag-bg)";
+                e.currentTarget.style.color = isLearning ? "var(--tag-fg)" : "var(--tag-fg)";
+              };
+              const onTagFocus = (e: React.FocusEvent<HTMLSpanElement>) => {
+                e.currentTarget.style.background = "var(--accent-bright)";
+                e.currentTarget.style.color = "#fff";
+              };
+              const onTagBlur = (e: React.FocusEvent<HTMLSpanElement>) => {
+                e.currentTarget.style.background = isLearning ? "var(--tag-bg)" : "var(--tag-bg)";
+                e.currentTarget.style.color = isLearning ? "var(--tag-fg)" : "var(--tag-fg)";
+              };
               return (
                 <span
                   key={s}
                   className="tag"
                   style={{
-                    transition: "background 0.2s, color 0.2s",
-                    cursor: "default",
-                    opacity: isLearning ? 0.7 : 1,
-                    fontStyle: isLearning ? "italic" : "normal",
+                    ...tagStyles,
                   }}
-                  onMouseOver={e => {
-                    (e.currentTarget as HTMLElement).style.background = "var(--accent-bright)";
-                    (e.currentTarget as HTMLElement).style.color = "#fff";
-                  }}
-                  onMouseOut={e => {
-                    (e.currentTarget as HTMLElement).style.background = "var(--tag-bg)";
-                    (e.currentTarget as HTMLElement).style.color = "var(--tag-fg)";
-                  }}
+                  onMouseOver={onTagMouseOver}
+                  onMouseOut={onTagMouseOut}
+                  onFocus={onTagFocus}
+                  onBlur={onTagBlur}
                 >
                   {s}
                 </span>

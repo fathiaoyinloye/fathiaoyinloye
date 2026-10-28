@@ -67,9 +67,22 @@ export function Navbar() {
               href={href}
               className="nav-link"
               style={{
-                color: isActive(href) ? "var(--fg)" : undefined,
+                color: isActive(href) ? "var(--fg)" : "var(--fg)",
                 borderBottom: isActive(href) ? "1px solid var(--accent-bright)" : "1px solid transparent",
                 paddingBottom: "2px",
+                transition: "color 0.2s ease, border-color 0.2s ease",
+              }}
+              onMouseOver={e => {
+                if (!isActive(href)) {
+                  e.currentTarget.style.color = "var(--accent-bright)";
+                  e.currentTarget.style.textDecoration = "underline";
+                }
+              }}
+              onMouseOut={e => {
+                if (!isActive(href)) {
+                  e.currentTarget.style.color = "var(--fg-muted)";
+                  e.currentTarget.style.textDecoration = "none";
+                }
               }}
             >
               {label.toUpperCase()}

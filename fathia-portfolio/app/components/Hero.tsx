@@ -122,8 +122,15 @@ export function Hero() {
                 { label: "Email", href: "mailto:fathiaoyinloye22@gmail.com" },
               ].map(({ label, href }) => (
                 <a key={label} href={href} target="_blank" rel="noreferrer"
-                  style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.78rem", letterSpacing: "0.15em", color: "var(--fg-subtle)", textDecoration: "none", textTransform: "uppercase" }}
-                >
+                  style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "0.78rem", letterSpacing: "0.15em", color: "var(--fg)", textDecoration: "none", textTransform: "uppercase", transition: "color 0.2s ease" }}
+                  onMouseOver={e => {
+                    e.currentTarget.style.color = "var(--accent-bright)";
+                    e.currentTarget.style.textDecoration = "underline";
+                  }}
+                  onMouseOut={e => {
+                    e.currentTarget.style.color = "var(--fg)";
+                    e.currentTarget.style.textDecoration = "none";
+                  }}>
                   {label}
                 </a>
               ))}

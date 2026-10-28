@@ -24,8 +24,7 @@ const steps = [
 export function TestingProcess() {
   return (
     <section id="testing-process" style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 1.5rem" }}>
-      <div style={{ marginBottom: "2.5rem" }}>
-        <p className="section-label" style={{ marginBottom: "0.5rem" }}>02 — TESTING PROCESS</p>
+<div style={{ marginBottom: "2.5rem" }}>
         <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.625rem)", fontWeight: 700, letterSpacing: "-0.03em", color: "var(--fg)" }}>
           My Testing Process
         </h2>
