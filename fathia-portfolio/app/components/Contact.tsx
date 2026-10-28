@@ -113,7 +113,6 @@ export function Contact() {
   return (
     <section id="contact" style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 1.5rem 5rem" }}>
       <div style={{ marginBottom: "2.5rem" }}>
-        <p className="section-label" style={{ marginBottom: "0.5rem" }}>04 — CONTACT</p>
         <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 2.625rem)", fontWeight: 700, letterSpacing: "-0.03em", color: "var(--fg)" }}>
           Contact
         </h2>
